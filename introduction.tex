@@ -1,0 +1,98 @@
+\section{Introduction}
+% \nat{Try to make intro fit in one page with teaser}
+
+Visualization is a pivotal component in data-driven storytelling, providing an audience with the means to understand patterns in data without requiring advanced statistical literacy~\cite{ddsbook}. One genre of data-driven storytelling~\cite{segel2010narrative} is the {\it data comic}~\cite{bach2017emerging}, in which a narrative grounded in data is conveyed by leveraging the well-established visual language of comics~\cite{mccloud1993understanding}. Data comics integrate captions and annotations with visualization, suppressing the complexity of data by incrementally revealing aspects of the data across multiple panels, arranged thoughtfully on one or more pages~\cite{bachdesign,wang2019study}. 
+
+A recently curated collection of manually-created data comics~\cite{datacomicsnet} demonstrates the richness of this genre and its applicability to telling stories about datasets of different natures.
+%\matt{We need to answer the of {\it why dynamic networks?} up front}
+From a storytelling standpoint, one of the most challenging forms of data is a dynamic network. Dynamic networks appear in many contexts, from analyzing social networks to modeling neural connections in the brain. In addition to evolving in time, such networks may contain multiple types of nodes and links exhibiting different connectivity patterns. Due to this complexity, it is notoriously difficult to communicate insights about dynamic networks to a general audience with a single large visual representation. Since conventional comics often illustrate the dynamic nature of characters and the interactions that occur between them over time by identifying and sequencing salient moments, dynamic networks are ideally suited for a comic treatment~\cite{bach2016telling}. 
+
+
+However, producing a data comic is a difficult and laborious process, one that involves switching between visualization and graphic design tools~\cite{bigelow2017iterating}, the former being ideal for generating accurate data representations, and the latter being ideal for stylizing visual elements and arrange panels in space. 
+While several recent tools support the construction of visual data stories~\cite{kim2017data,satyanarayan2014lyra,xia2018dataink,ren2014ivisdesigner}, they do not take advantage of the comic form as a storytelling medium. Thus authors have to resort to illustration and design tools such as Adobe Illustrator and Photoshop.
+
+%Instead, many tools address the creation of a single visualization, illustrating an individual message as opposed to conveying a holistic narrative~\cite{kim2017data,satyanarayan2014lyra,xia2018dataink,ren2014ivisdesigner}. While other tools offer support for sequencing multiple visualizations to produce a narrative structure, they are limited to a linear slideshow or scrolling format and thus do not support the spatial arrangements that are central to the design of comics~\cite{storypoints,amini2017authoring,conlen2018,gratzl2016visual,mckenna2017visual}. Moreover, existing tools focus on realizing a preconceived story rather than on the process of identifying and refining a narrative, and thus they enforce a rigid workflow in which data exploration is disjoint from designing the audience's experience. This separation hinders rapid experimentation with story ideas, an issue that we address with \toolname{}.
+
+
+We contribute \toolname{} as a storytelling tool for producing data comics \rev{with a focus on dynamic networks.
+\toolname{} offers fluid storyboarding by blending analysis and presentation in a unified environment supported by pen and touch interactions. A storyteller can use \toolname{} to rapidly explore their data and generate visualization panels via interactive filtering and from recommendations of interesting data patterns, resulting in a visual story with custom annotations, automatic panel transitions, and layout templates.}
+
+\rev{The direct manipulation of panels and their data contents further facilitates the storytelling process. Natural touch interaction supports the iteration of story ideas by experimenting with different ways to compose panels and lay them out on a page. The use of a digital pen also allows storytellers to annotate panels with drawings and handwriting, or to draw custom glyphs for data entities. \toolname{} leverages the underlying data to eliminate the tedious duplication of actions necessary in conventional illustration software, such as propagating visual designs to other panels.}
+
+
+\rev{To demonstrate the expressivity of \toolname{}, we created a set of comics showing different rendering styles, panel layouts, visualization types, and narrative structures.} Results from a reproduction study suggest that novice participants can successfully learn to use \toolname{} with minimal guidance to produce comics about dynamic networks. \rev{Insights about usability that led to improvements of \toolname{} included difficulties in discovering features, the inconsistency of interactions, and the complexity of visualization contents.}
+
+%Storytellers can use \toolname{} to rapidly explore data and generate visualization panels through interactive filtering and recommendations of interesting data patterns. They can author a visually compelling story through custom annotations, automatic panel transitions, and layout templates. Direct manipulation of panels and their data contents with pen and touch interactions facilitates the authoring process. 
+
+%\matt{We need to answer the of {\it why pen + touch?} up front}
+%Another distinguishing aspect of many comics is the unique style of the individual illustrators who draw them. 
+%We attempt to retain this aspect of comics by leveraging pen-based interactions in \toolname{}, allowing storytellers to stylize nodes and annotate panels to reflect their own custom visual style.
+%Beyond styling, \toolname{} features a palette of pen and touch interactions that allow storytellers to directly manipulate panels and their contents.
+
+%With \toolname{}, a storyteller can quickly generate visualization panels to iterate through story ideas by experimenting with different ways to compose panels and lay them out in space. 
+%It also provides scaffolding for narrative structures by integrating suggestions, automatic generation of transition panels, and a set of common comic page layouts. 
+%Ultimately, the environment is designed to support a flexible workflow integrating data exploration, story authoring, and presentation within in a single tool. 
+
+
+% A user study with novice users with  designers and data analysts demonstrate its usability (Section 6).
+ 
+%, relying on data binding to ensure visual consistency between the panels
+% . To better convey the semantics of the data, 
+
+% We opted to target DataToon to the creation of comics from dynamic multivariate networks. This scope allowed us to build upon previous work~\cite{bach2016telling} which demonstrated the power of the genre for this type of data. 
+
+
+
+% \nat{why: creating these things is hard}
+
+% While several recently proposed tools from the research community have aspired to unify this process for infographics~\cite{kim2017data,bigelow2017iterating,liu2018data,Wang2018}, data comics pose unique design challenges. 
+% In a data comic, we visualize aspects of the data across multiple panels, and thus the design challenges we face include a need to maintain visual consistency between them~\cite{qu2018keeping} and to provide appropriate transitions from one panel to the next in an effort to convey a coherent narrative. %Another challenge is to remain true to the genre, in the sense that comics are traditionally drawn by hand, allowing each comic artist to develop their own authentic style. 
+% They also require crafting expressive visual designs that align well with the semantics of the data and experimenting with different ways to break down the story into panels and arrange them in space. Addressing these challenges with existing tools is extremely tedious and time-consuming.
+
+%One explanation for this lack of examples might be the effort involved in creating compelling comics that  include real-world data and exhibit an appealing visual style. While high-level design patterns for designing data comics have been proposed~\cite{bachdesign}, technically implementing data comics is mostly manual labor, typically involving two distinct families of tools: visualization authoring environments and a graphic design applications. While visualization tools mostly lacks flexible support for adding annotations and customizing graphical elements, graph environments often lack data-driven abstractions and require time-consuming and error-prone manual encoding~\cite{bigelow2014reflections,satyanarayan2014lyra}. 
+% Thus, designing the new generation of authoring tools for data-driven storytelling and bridging the gap between two ends of the spectrum, has been an active research area in recent years. 
+%While several recently proposed tools from the research community have aspired to unify this process for infographic design~\cite{kim2017data,bigelow2017iterating,liu2018data,Wang2018}, 
+%Moreover, data comics pose unique design challenges such as laying out panels, assure consistency between panels and visualizations.
+
+%and we are unaware of previous work that proposes an authoring approach for this genre. 
+%In a data comic, we visualize aspects of the data across multiple panels, and thus the design challenges we face include a need to maintain visual consistency between them~\cite{qu2018keeping} and to provide appropriate transitions from one panel to the next in an effort to convey a coherent narrative. 
+%Another challenge is to remain true to the genre, in the sense that comics are traditionally drawn by hand, allowing each comic artist to develop their own authentic style.
+%Addressing these challenges with existing tools would be extremely tedious and time-consuming. 
+
+% Composing the spatial layout of panels, styling visual elements while ensuring correct data representation make data comics extremely time-consuming to create even for data visualization and graphic design professionals.
+
+ %Data comics involving multiple panels still requires to iterate between visualization creation tools and graphic design tools. In addition, the specificity of data comics poses further challenges such as managing multiple panels of visualizations (a data story usually has more than one visualization as supporting evidence) and maintaining consistency across them. Altogether, using existing tools to create compelling-looking and attractive examples of data comics requires significant expertise and tool skills. 
+
+% \ben{\textit{start with data comics and talk about necessity and difficulty in creating comics: 
+% }Comics are emerging as a story-telling medium for data through their unique combination of narration and visual content, as well as their familiarity and accessibility (web, paper, other offline media, etc.)~\cite{bach2017emerging}. Data comics have been presented for networks~\cite{bach2016telling} and many other domains\footnote{\url{http://datacomics.net}}. While generally being perceived as rather 'simple' to create, significant expertise and tool skills (e.g. Photoshop, Illustrator) are required to create compelling-looking and attractive examples of data comics. Moreover, data comics visualize data.
+% }
+
+% \nat{what we did} 
+
+% This paper introduces DataToon, an editor for authoring data-driven data comics via direct pen + touch interactions. 
+% \matt{explain why dynamic networks}
+%We target dynamic and geographic networks as they are a form of data having a complexity that is often best communicated via multiple views. 
+%Furthermore, our focus on dynamic networks allows us to realize a speculative design space proposed for depicting this form of data in comic form~\cite{bach2016telling,bach2017emerging,bachdesign}.  
+% DataToon enables authors to quickly generate panels from data, relying on data binding to ensure consistency of the visuals. It also provides direct and fluid interactions to explore different expressive visual designs by sketching, and to experiment with different ways to break down panels and lay them out in space by touch interactions. DataToon also features mechanisms to assist in data comic creation, such as the automatic generation of transitions between two panels. We opted to target DataToon to the creation of comics from dynamic multivariate networks. This scope allowed us to build upon previous work~\cite{bach2016telling} which demonstrated the power of the genre for this type of data. 
+%rovides data binding data comics and provides features to integrate the data into the design process, e.g., combine exploration and presentation, propagate styles, and automatically create transitions between panels. \ben{are these the most important ones?}.
+
+%In this paper, we describe how the design decisions leading to \toolname{} are rooted in the analysis of the comic form, as well as how we overcame the aforementioned challenges with respect to comic authoring. 
+% \matt{the following repeats much of the preceding paragraph}
+% The design of our tool is deeply , meaning that the core elements of comics (words, pictures, and panels) are synthesized with the design elements of data stories (visualizations, annotations, and story pieces). 
+% \toolname{} offers intuitive, direct manipulation through pen and touch in order to create, manipulate, and customize the elements of data comics. 
+% \toolname{} smoothly integrates visual encoding, story authoring, and annotation, activities which would have previously required use of multiple tools with little or no connection to the underlying data. 
+% This enables flexible and iterative design and ensures the visual consistency~\cite{qu2018keeping} across multiple panels. 
+% We start with a reflection on design challenges for creating data comics (Section 2). With these in mind, we review current authoring tools (Section 3) and introduce the key concepts and interaction paradigms for DataToon (Section 4). A gallery of examples available in supplemental material demonstrates the expressiveness of the tool (Section 5). Findings from a study with eight designers and data analysts demonstrate its usability (Section 6).
+% Specifically this paper contributes:
+% \begin{itemize}[noitemsep, topsep=0pt]
+% \item Synthesis of unique challenges pertaining to the creation of data comics;
+% \item Design rationale and interface concepts of DataToon, a pen+touch authoring interface for crafting comics from dynamic multivariate networks;
+% \item Gallery of examples of data comics created with DataToon demonstrating the expressiveness of the tool; 
+% \item Findings from a study with eight participants demonstrating that data analysts can use DataToon to replicate data comics, as well as insights from experienced graphics designers on how DataToon supports designing information for communication  \nat{I dont like the last part but not sure what to say}
+% \end{itemize}
+
+
+%We conducted a study with \rev{eight} participants in which we asked them to replicate and modify two data comics. Based on participants' performance and the feedback we show that it is possible to learn \toolname{} with minimal training and that it enables the expressive authoring of data comics \nam{Or ``we also demonstrate the expressiveness of our tool through examples'', since the user study does not involve creating a new data comic. }. 
+%\ben{update that section once I have been through the other sections.}
+%\ben{something is missing here, perhaps outline, as this paper follows a non-standard structure?: 
+%In the following, we start with a reflection on design challenges on generating data comics, based on our own experience (Section 2). With these criteria in mind, we review current authoring tools and introduce the high-level concepts of our authoring tool (\toolname). We then show how our tool supports the creation of comics (Section X) and which interface concepts are necessary (Section x). A gallary of data comics created with DataToon demonstrates the expressiveness of the tool. Findings from a study with eight designers and data analysts demonstrates usability of DataToon.

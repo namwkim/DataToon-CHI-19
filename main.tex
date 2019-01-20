@@ -1,0 +1,227 @@
+\documentclass[sigchi]{acmart}
+
+\usepackage{booktabs} % For formal tables
+\usepackage[normalem]{ulem} % strikethrough
+% \usepackage{cancel}% strikethrough
+\usepackage{soul}% strikethrough
+
+\newcommand{\rev}[1]{\textcolor{black}{#1}}
+\newcommand{\toolname}{DataToon}
+\newcommand{\bstart}[1]{\vspace{1mm} 
+\noindent{\textbf{#1}}}
+\newcommand{\bcstart}[1]{\vspace{1mm} \noindent{\textbf{#1:}}}
+\newcommand{\bpstart}[1]{\vspace{1mm} \noindent{\textbf{#1.}}}
+\long\def\ignore#1{}
+
+% show TODO and author comments:
+\definecolor{nam}{RGB}{31,119,180}
+\definecolor{matt}{RGB}{255,127,14}
+\definecolor{benjamin}{RGB}{44,160,44}
+\definecolor{nathalie}{RGB}{214,39,40}
+\definecolor{haijun}{RGB}{148,103,189}
+\definecolor{michael}{RGB}{140,86,75}
+\definecolor{ken}{RGB}{27,119,194}
+\definecolor{michel}{RGB}{23,190,207}
+\definecolor{hanspeter}{RGB}{188,189,34}
+
+\definecolor{add}{HTML}{009688}
+\definecolor{delete}{HTML}{F44336}
+
+
+
+\newcommand{\cf}{cf.}
+\newcommand{\etal}{et al.}
+\newcommand{\eg}{e.g.,}
+\newcommand{\ie}{i.e.,}
+\newcommand{\todo}[1]{\textbf{\textcolor{magenta}{#1}}}
+\newcommand{\added}[1]{\textcolor{add}{#1}}
+\newcommand{\deleted}[1]{\textcolor{delete}{\sout{#1}}}
+
+\newcommand{\white}[1]{\textcolor{white}{#1}}
+
+\newcommand{\nam}[1]{\textbf{\textcolor{nam}{\{NWK: #1\}}}}
+\newcommand{\matt}[1]{\textcolor{matt}{\textbf{\{MB: #1\}}}}
+\newcommand{\ben}[1]{\textcolor{benjamin}{\textbf{\{BB: #1\}}}}
+\newcommand{\nat}[1]{\textcolor{nathalie}{\textbf{\{NHR: #1\}}}}
+\newcommand{\haijun}[1]{\textbf{\textcolor{haijun}{\{HX: #1\}}}}
+\newcommand{\michael}[1]{\textcolor{michael}{\textbf{\{MM: #1\}}}}
+\newcommand{\ken}[1]{\textcolor{ken}{\textbf{\{KH: #1\}}}}
+\newcommand{\michel}[1]{\textcolor{michel}{\textbf{\{MP: #1\}}}}
+\newcommand{\hanspeter}[1]{\textcolor{hanspeter}{\textbf{\{HP: #1\}}}}
+
+% \newcommand{\matt}[1]{}
+
+% Copyright
+% \setcopyright{none}
+% \setcopyright{acmcopyright}
+\setcopyright{acmlicensed}
+%\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+% \setcopyright{licensedcagov}
+%\setcopyright{cagovmixed}
+%\setcopyright{licensedothergov}
+
+
+\copyrightyear{2019} 
+\acmYear{2019} 
+% \setcopyright{acmlicensed}
+\acmConference[CHI 2019]{CHI Conference on Human Factors in Computing Systems Proceedings}{May 4--9, 2019}{Glasgow, Scotland UK}
+\acmBooktitle{CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2019), May 4--9, 2019, Glasgow, Scotland UK}
+\acmPrice{15.00}
+\acmDOI{10.1145/3290605.3300335}
+\acmISBN{978-1-4503-5970-2/19/05}
+
+% Authors, replace the red X's with your assigned DOI string during the rightsreview eform process.
+
+\settopmatter{printacmref=true}
+\fancyhead{}
+
+
+\begin{document}
+\title[\toolname{}]{\toolname{}: Drawing Data Comics About Dynamic Networks with Pen + Touch Interaction}
+% \titlenote{Produces the permission block, and
+%   copyright information}
+% \subtitle{Extended Abstract}
+% \subtitlenote{The full version of the author's guide is available as
+%   \texttt{acmart.pdf} document}
+
+\author{
+Nam Wook Kim\textsuperscript{1,2} \space\space\space
+Nathalie Henry Riche\textsuperscript{2} \space\space\space
+Benjamin Bach\textsuperscript{3} \space\space\space
+Guanpeng Xu\textsuperscript{4} \space\space\space
+Matthew Brehmer\textsuperscript{2} \\
+Ken Hinckley\textsuperscript{2} \space\space\space
+Michel Pahud\textsuperscript{2} \space\space\space
+Haijun Xia\textsuperscript{5} \space\space\space
+Michael J. McGuffin\textsuperscript{6} \space\space\space
+Hanspeter Pfister\textsuperscript{1}
+}
+
+
+\affiliation{
+\textsuperscript{1} Harvard University \space\space\space
+\textsuperscript{2} Microsoft Research \\
+\textsuperscript{3} University of Edinburgh \space\space\space 
+\textsuperscript{4} Philips Academy \space\space\space
+\textsuperscript{5} University of Toronto \space\space\space
+\textsuperscript{6} \'Ecole de technologie sup\'erieure \\
+\{namwkim, pfister\}@g.harvard.edu \space\space\space 
+\{nath, mabrehme, kenh, mpahud\}@microsoft.com \\
+bbach@inf.ed.ac.uk \space\space\space
+gxu19@andover.edu \space\space\space
+haijunxiadgp.toronto.edu \space\space\space
+michael.mcguffin@etsmtl.ca
+}
+
+% \author{Nam Wook Kim}
+% \affiliation{Harvard University}
+% \email{namwkim@seas.harvard.edu}
+
+% \author{Nathalie Henry Riche}
+% \affiliation{Microsoft Research}
+% \email{Nathalie.Henry@microsoft.com}
+
+% \author{Benjamin Bach}
+% \affiliation{University of Edinburgh}
+% \email{bbach@inf.ed.ac.uk}
+
+% \author{Guanpeng Xu}
+% \affiliation{Philips Academy}
+% \email{giftedbee@gmail.com}
+
+% \author{Matthew Brehmer}
+% \affiliation{Microsoft Research}
+% \email{mabrehme@microsoft.com}
+
+% \author{Ken Hinckley}
+% \affiliation{Microsoft Research}
+% \email{kenh@microsoft.com}
+
+% \author{Michel Pahud}
+% \affiliation{Microsoft Research}
+% \email{mpahud@microsoft.com}
+
+% \author{Haijun Xia}
+% \affiliation{University of Toronto}
+% \email{haijunxiadgp.toronto.edu}
+
+
+% \author{Michael McGuffin}
+% \affiliation{École de technologie supérieure}
+% \email{michael.mcguffin@etsmtl.ca}
+
+% \author{Hanspeter Pfister}
+% \affiliation{Harvard University}
+% \email{pfister@g.harvard.edu}
+
+
+
+
+% The default list of authors is too long for headers.
+\renewcommand{\shortauthors}{N. Kim et al.}
+
+
+\begin{abstract}
+Comics are an entertaining and familiar medium for presenting compelling stories about data. However, existing visualization authoring tools do not leverage this expressive medium. In this paper, we seek to incorporate elements of comics into the construction of data-driven stories about dynamic networks. We contribute \toolname{}, \rev{a flexible data comic storyboarding tool that blends analysis and presentation with pen and touch interactions.} A storyteller can use \toolname{} to rapidly generate visualization panels, annotate them, and position them within a canvas to produce a visual narrative. \rev{In a user study, participants quickly learned to use \toolname{} for producing data comics}.
+ 
+
+% \added{\toolname{} bridges the current gap between exploration and storytelling in existing tools by enabling a storyteller to rapidly generate visualization panels, as well as to annotate them and arrange them within a canvas to }
+
+% Comics is an entertaining and familiar storytelling medium. Despite its great potential for understanding and communicating complex data, there are few existing tools that leverage the unique form of comics in constructing data-driven stories.  medium in . 
+
+% In this paper, we investigate ways to incorporate the unique form of comics to construct data-driven stories.
+
+
+% This paper  presents \toolname{}, a browser-based tool for creating highly expressive data comics about dynamic networks via pen and touch interactions. 
+
+% The need to craft expressive visuals from data, maintain consistency accross panels and compose them in space to create a compelling narrative are unique challenges of data comics that are not well supported by current authoring tools. 
+
+% \toolname{} provides a direct manipulation pen + touch interface along with expressive annotation options, allowing storytellers to sketch with data and experiment with different designs to produce dynamic network comics. 
+
+% \toolname{} smoothly integrates data binding, visual encoding, story authoring, and annotation, activities which would have previously required use of multiple tools with little or no connection to the underlying data. We conducted a qualitative study to evaluate the usability and demonstrate the expressiveness of our tool through examples.
+\end{abstract}
+
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10003120.10003145.10003151</concept_id>
+<concept_desc>Human-centered computing~Visualization systems and tools</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[300]{Human-centered computing~Visualization systems and tools}
+
+\keywords{Data comics, pen + touch interfaces, direct manipulation, storytelling, dynamic networks, data visualization.}
+
+\begin{teaserfigure}
+  \includegraphics[width=1.0\textwidth]{figures/teaser.png}
+  \caption{\toolname{} is a pen \& touch environment for producing data comics. A storyteller can rapidly isolate aspects of their data via filtering and pattern detection, as well as assemble a rich narrative via annotation and automatic panel transitions.}
+  \centering
+  \label{fig:teaser}
+\end{teaserfigure} 
+
+\maketitle
+\renewcommand{\shortauthors}{Nam et al.}
+% \input{paper-body}
+
+\input{introduction}
+\input{related_work}
+% \input{datacomics}
+%\input{design_considerations}
+% \input{designgoals.tex}
+% \input{workflow}
+% \input{interface}
+% \input{evaluation}
+% \input{discussion}
+% \input{conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{bibliography}
+
+\end{document}

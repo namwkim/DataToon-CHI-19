@@ -1,0 +1,164 @@
+%\nam{is this a good section title?}
+\section{Related Work}
+\label{sec:related_work}
+
+
+
+\toolname{} draws from and extends previous research and tool development relating to communicative visualization, data-driven storytelling, and pen and touch interaction. 
+
+
+\subsection{Communicative Visualization}
+
+Although the visualization research community has been primarily devoted to the study of visualization in support of data analysis tasks, visualization has throughout history been used to communicate insight to an audience. 
+Recent research has examined the aspects of memorability~\cite{borkin2013makes,borkin2016beyond}, visual embellishment~\cite{bateman2010useful}, and annotation~\cite{ren2017chartaccent} in the context of communicative visualization, which has in turn informed the design of increasingly expressive interactive visualization authoring tools.
+For example, tools like Lyra~\cite{satyanarayan2014lyra} or iVisDesigner~\cite{ren2014ivisdesigner} both provide a palette of graphical styling options that can be applied to a visualization. 
+More recently, Data-Driven Guides~\cite{kim2017data}, Data Illustrator~\cite{liu2018data}, DataInk~\cite{xia2018dataink}, and Charticulator~\cite{ren2018chart} allow further expressivity in terms of custom visual marks and custom layouts, while tools like ChartAccent~\cite{ren2017chartaccent} or DataWrapper~\cite{datawrapper} provide rich annotation options. 
+It is important to note that most of these tools are devoted to visualizing tabular data;
+Graph Coiffure~\cite{spritzer2015towards} is an exception in that it provides an interface for visualizing, styling, and laying out static node-link diagrams.
+However, to our knowledge, there exists no interactive authoring tool for producing communicative visualization about dynamic networks, this being the purpose of \toolname{}.
+
+
+
+% However, to create comics using these systems, many steps need to be repeated (i.e. for each panel) and assuring consistency (C2), creating manual transitions (C3), and elaborate the final layout (C4) require to be done manually via additional software. 
+
+
+
+
+\subsection{Data-Driven Storytelling}
+
+Most communicative visualization tools allow for the production of one visualization at a time. While these tools may be sufficient for conveying simple messages about the data, they cannot support the design of a fuller narrative and thus their ability to produce a comprehensive story is limited.
+
+Recent research has examined the integration of communicative visualization within a linear narrative sequence~\cite{hullman2013deeper}.  
+%address C1, and help design individual data comics panels, they do not solve challenges tied to working with multiple panels (C2-C4). 
+%, DataWrapper, DataIllustrator~\cite{liu2018data}, etc) and afford some level of annotating and highlighting to add a simple narrative. However, these tools are limited for creating a complex data story which often requires more than one visualization. 
+% wang2018infonice
+%\nam{I expanded the description of the tools} 
+This research is reflected in another category of tools that focus on sequence and narration. 
+These include commercial tools including Tableau's Story Points~\cite{storypoints} and Bookmarks for Microsoft's Power BI~\cite{PowerBI}, which provide interfaces for composing a sequence of story points with embedded visualizations. 
+Meanwhile, tools emerging from the research community aim for greater expressivity. These include: Ellipsis~\cite{satyanarayan2014authoring} and Timeline Storyteller~\cite{TimelineStoryteller}, which augment a sequence of visualizations with annotations and state-based scene transitions; DataClips~\cite{amini2017authoring}, which focuses on sequencing data-driven video clips; and Vistories~\cite{gratzl2016visual}, which leverages the interaction history produced during data exploration to automatically generate a sequence that can be curated and annotated into a presentable story. 
+% (e.g., Tableau Story Points~\cite{storypoints}, Ellipsis~\cite{satyanarayan2014authoring}, DataClips~\cite{amini2017authoring}, VisStories~\cite{gratzl2016visual}, etc). 
+% Some of these tools focus on specific storytelling formats such as timelines~\cite{brehmer2017timelines} and videos~\cite{amini2017authoring} while others are agnostic to visualization types at the expense of expressiveness~\cite{storypoints}. \matt{Timeline Storyteller doesn't have a paper (\cite{brehmer2017timelines} is the survey + design space paper), and a timeline is not a storytelling format, it's a data type.}
+In each of these tools, a set of annotated visualizations are arranged in a linear narrative sequence, revealed one at a time via stepping or scrolling interactions~\cite{mckenna2017visual}.
+
+% Although the recent tools attempt to address the lack of storytelling support in visualization construction tools, they are limited to a simple linear format (e.g., reordering story pieces) and thus lack support for a flexible spatial juxtaposition of story pieces which is essential for comics.
+Unlike linear slideshows and scroll-based stories, the layout and juxtaposition of panels in a comic allows for non-linear narrative structures, in which a reader can consume narrative points in various orders in a glanceable format that affords both skimming and revisitation.
+Unfortunately, no single existing data-driven tool can produce such narrative structures. 
+% On the other hand, tools for creating conventional comics are mostly illustration software and are not tailored to data visualization. Using these tool requires importing images of data visualizations created by other software. 
+The sole existing data comics editor by Zhao and Elmqvist~\cite{zhao2015data} allows for the composition of linear slideshow comics and the embellishment of visualization with speech bubbles and a narrator character. However, like illustration software, this tool requires the importation of preexisting visualization generated by other tools. 
+In contrast, we provide the first all-in-one visualization and narrative design tool where multiple panels can be arranged freely on a page.
+
+% featuring several comic-specific features such as comic-styled brushes and 3D character modeling~\cite{clipstudio}. Comic editors offer convenient features for ease-of-use, including pre-drawn characters, text effects, and page templates~\cite{comipo,comiccreator} but are not tailored to data visualization. Using these tool requires importing images of data visualizations created from other software. 
+
+% Previous work by Zhao and Elmqvist presented an editor for data comics~\cite{zhao2015data}, allowing to create sequences, linear layouts, and embellish them with comic elements such as speech bubbles and a narrator character.  However, this tool is in the same vein of conventional comics authoring ones, based on importing images created from other data visualization tools. 
+
+Another assumption inherent to many existing data-driven storytelling tools is that the storyteller already has a preconceived story, perhaps developed in the course of data analysis performed with other tools, in consultation with data analysts and subject matter experts, or in some combination thereof.
+However, this separation of analysis and storytelling hampers rapid experimentation of alternative  narrative structures and the process of refining a story. 
+In other words, dedicated analysis tools often do not have flexible storytelling features while dedicated storytelling tools lack data exploration capabilities such as ways to collect and organize insights.
+% In these tools, not much attention has been given to enhance the process of making a story, mostly focusing on the outcomes they produce. Their interfaces mostly require a specific order of operations to construct a story (e.g., separate interfaces for data exploration and story authoring), which hampers rapid experimentation of different story ideas. Moreover, storytelling is usually considered as an afterthought, meaning that they often do not have data exploration capability or fall short in support of collecting and organizing findings. 
+% No tools currently provide automatic assistance in structuring and sequencing a story.
+% \matt{would argue that Vistories is providing automatic assistance}
+One of the benefits of an interface that allows for the flexible arrangement of comic panels is that storytellers can rapidly iterate with alternative narrative structures.
+Furthermore, they can quickly generate and discard panels the process of data exploration without disrupting completed parts of the comic.
+Finally, \toolname{} integrates automatic suggestions and transitions between panels as a way to scaffold a story, eliminating the tedium of alternating between a dedicated visualization tool and a  
+dedicated storytelling tool.
+
+%They also usually offer numerous parameter configurations via windows, menus and buttons which may induce a specific order of operations, limiting the flexibility and experimentation we are seeking for authoring comics. 
+
+
+% Editing and iterating over the visualization design to create labels or deemphasize parts of the visualization (C1) requires much back and forth with other data visualization tools.  In contrast to these tools, DataToon aims at providing data binding to enable authors to experiment with visual designs by minimizing laborious effort required to maintain consistency across panels (C2). 
+
+%It is also informed by the results of the qualitative studies on data comics~\cite{bach2017emerging,bachdesign,bach2016telling}.  
+
+\subsection{Pen + Touch Interaction for Creativity Support}
+% To facilitate rapid and flexible storyboarding, we adopt direct manipulation using pen and touch.
+Historically, comics have been drawn by hand, and thus we gravitated to interfaces that could leverage expressive pen-based input for drawing and styling comic elements.
+Such interfaces have become increasingly popular in recent years, and along with them we have seen an emerging body of research that focuses on the combination of pen and touch interaction for content creation and manipulation. 
+By combining these forms of interaction, users report feeling more directly engaged as compared to manipulating elements via a WIMP interface~\cite{xia2018dataink}. 
+Hinckley \etal~introduced a rich palette of compelling interaction techniques for manipulating content, all following the principle that the pen writes and touch manipulates~\cite{hinckley2010pen,pfeuffer2017thumb}. 
+Other research has sought to identify and evaluate pen and touch gestures for common operations on interactive surfaces, including selection, deletion, and copy / paste~\cite{morris2010understanding}, and these gestures have applied such gestures in various applications including diagram editing~\cite{frisch2009investigating}, digital drawing~\cite{xia2016object,xia2017collection}, early-stage ideation~\cite{xia2017writlarge}, and active reading ~\cite{hinckley2012informal}. 
+Visualization researchers are also beginning to take advantage of touch and pen interaction in various contexts~\cite{lee2012beyond}, including visualization authoring~\cite{xia2018dataink}, storytelling~\cite{lee2013sketchstory}, and data exploration~\cite{zgraggen2014panoramicdata,jo2017touchpivot}, though until \toolname{}, they have yet to apply such interaction to the creation of data comics.
+
+
+% Storytelling is a creative and iterative process so as making comics. To facilitate rapid and flexible storyboarding
+
+
+% To providing a flexible environment, facilitating storyboarding, experimentations with visual designs and  rapid iteration, we propose to leverage direct manipulation using pen and touch.
+
+% By leveraging natural human sketching and manipulation skills, pen and touch interaction brings enhanced the feeling of direct engagement compared to manipulating configurations and parameters through WIMP UIs.
+
+% which in turn reducing semantic and articulatory distance~\cite{hutchins1985direct}. 
+
+
+% To facilitate creative exploration of the design space of data comics in a fluid workflow, we take a direct manipulation approach to leverage natural human sketching and physical manipulation skills~\cite{xia2018dataink,hinckley2010pen}. 
+
+
+
+
+% A number of recent visualization tools take advantage of multi-touch and pen gestures in various contexts. DataInk~\cite{xia2018dataink} enables the expressive design of personal data visualizations by integrating data binding with freeform sketching. SketchStory~\cite{lee2013sketchstory} also leverages freeform sketching to create charts to communicate data on a whiteboard. Other tools focus on supporting interactive data manipulation and exploration~\cite{zgraggen2014panoramicdata,jo2017touchpivot}.
+
+
+% Our work builds on these prior work and enables the creation of data comics with direct pen and touch input. 
+
+%  Hinckley et al introduced a slew of compelling interaction techniques for metaphorical manipulation of content, following the principle that pen writes and touch manipulates~\cite{hinckley2010pen,pfeuffer2017thumb}. Previous studies illustrated a set of pen and touch gestures for common operations on interactive surfaces, including selection, deletion, and copy and paste~\cite{morris2010understanding}, as well as diagram editing~\cite{frisch2009investigating}. A number of direct pen and touch systems have been proposed in various application domains, such digital drawing~\cite{xia2016object,xia2017collection}, early-stage ideation~\cite{xia2017writlarge}, and active reading ~\cite{hinckley2012informal}. We employ a set of gestures used in these tools to inform the interaction design of our tool.
+
+
+
+% \nat{remove this paragraph?}
+% Pen and touch interaction has been gradually adopted to visualization tools as well. Lee at al discuss potential benefits of Post-WIMP (Windows,  Icons,  Menus, and a Pointer) interfaces for visualization interactions. Many previous research investigated various selection and exploration techniques for visualization, including data transformation and analysis~\cite{zgraggen2014panoramicdata,walny2012understanding,jo2017touchpivot,sadana2016expanding}, and the manipulation of node-link diagrams~\cite{kister2016multilens,mcguffin2009interaction,frisch2009investigating}. 
+
+
+
+%\subsection{Data-Driven Storytelling}
+
+%Storytelling can enrich visualization with a compelling narrative to communicate data more effectively and intuitively~\cite{gershon2001storytelling}. Segal and Heer~\cite{segel2010narrative} used \textit{narrative visualization} to refer to the specific form of storytelling which combines both exploratory and communicative features of visualization to convey an intended story~\cite{hullman2011visualization}. Lee et al. further refine the definition by illustrating what constitutes \textit{visual data stories} and the process of creating them, which ranges from generating story pieces (visualization and annotations) and arranging them in a meaningful order to construct a visual narrative. 
+
+%Previous studies looked at specific formats for data-driven storytelling, including animation~\cite{robertson2008effectiveness}, data videos~\cite{amini2015understanding,choe2015characterizing}, annotation~\cite{ren2017chartaccent}, and data comics~\cite{bach2016telling,bach2017emerging,bachdesign}. Each form offers different ways to integrate visualizations into data stories, and as a result, has different advantages and limitations for communicating data. For instance, a single annotated chart may lack the capacity to incorporate a complex narrative, while it is effective in conveying a concise message in a limited space. In general, the choice of storytelling form mostly depends on various factors such as the context of data, the intended audience, the content of the story, and the intended medium~\cite{segel2010narrative}. 
+
+%In addition to the forms, mechanisms, and operations of crafting data stories, many studies also investigated cognitive aspects of data-driven storytelling. Unlike early research in visualization that focused on the low-level perception of visual encodings, these studies focus on higher level cognitive processes of visualization including memorability~\cite{borkin2016beyond,borkin2013makes,bateman2010useful,borgo2012empirical}, persuasiveness~\cite{pandey2014persuasive}, aesthetics~\cite{harrison2015infographic}, engagement~\cite{hullman2011benefitting,diakopoulos2011playable,boy2015storytelling}, as well as the role of rhetoric~\cite{hullman2011visualization,kong2018frames}, narration~\cite{dimara2017narratives}, and narrative flow~\cite{mckenna2017visual,hullman2013deeper}.
+
+
+% The most common approach is to use visualization creation tools to generation charts and graphs, and annotate them with textual and graphical elements using external design tools.
+
+% They used \textit{narrative visualization} to refer to the specific form of storytelling, but no clear definition was provided. Hullman and Diakopoulos~\cite{hullman2011visualization} later defined narrative visualization as a style of visualization that combines both exploratory and communicative features of visualization to convey an intended story. On the other hand, Lee et al.~\cite{lee2015more} proposed the term \textit{visual data stories} to take into account a holistic process of transforming data into visual stories, ranging from generating story pieces backed up by data, converting the pieces to visualizations with annotations and highlighting, and arranging them to construct a whole narrative. In their definition, they exclude completely reader-driven stories without any guidance. 
+
+
+
+% Segal and Heer~\cite{segel2010narrative} classified different ways of how visualization is integrated into data stories, such as magazine style, annotated chart, slide show, video, animation, and comics. 
+
+% They further discussed different narrative structures that balance author-driven (communication-focused) and reader driven (exploration-focused) stories, which include the martini glass, interactive slideshow, and
+% drill-down story~\cite{segel2010narrative}. 
+
+
+%Robertson et al.~\cite{robertson2008effectiveness} studied the effect of different animation techniques on presentation and analysis. Amini et al.~\cite{amini2015understanding} provide a qualitative analysis of data videos to identify design elements and processes used to create them. Choe et al.~\cite{choe2015characterizing} analyzed  visualization usages in presentation videos featuring personal data. Ren et al.~\cite{ren2017chartaccent} looked at the design space of annotation and highlighting techniques that are essential to communicative visualization. Recently, Bach et al.~\cite{bach2016telling,bach2017emerging,bachdesign} investigated the benefit of using comics to tell data stories and proposed different design patterns for data comics. 
+
+
+% Explorable Explanations, Personal Visualization
+
+%Stolper et al.~\cite{stolper2017emerging} similarly analyzed examples of visual data stories in the wild with a specific focus on author-driven examples. 
+
+% There are various narrative genres of using visualization for telling stories with data~\cite{segel2010narrative}. Magazine styles (e.g., FiveThirtyEight, The Upshot - The New York Times) and infographics (e.g., Visual.ly) are popularly used in news media, while other narrative visualizations often take forms of videos, animations, slideshow, and interactive graphics~\cite{segel2010narrative,kosara2013storytelling}. Unlike exploratory visualization systems, visualizations for storytelling are tightly coupled with the narrative structure of data stories, provide supporting evidence and details through annotations and highlights, and also invite readers through engaging interactions~\cite{lee2015more,stolper2017emerging,segel2010narrative,kosara2013storytelling}.
+
+% Many existing visualization construction tools still lack support for crafting data stories, such as collecting and organizing story pieces from data exploration~\cite{lee2015more}. Likewise, most sophisticated narrative visualizations are manually crafted, often requiring design and programming skills (e.g., Earth Temperature Timeline~\cite{xkcd}, The Fallen of World War II~\cite{fallen}, Visualizing MBTA Data~\cite{mbta}). It was only recently that visualization tools have begun to support authoring data stories in different forms and styles such as motion graphics~\cite{amini2017authoring}, annotated charts~\cite{ren2017chartaccent}, custom infographics~\cite{kim2017data}, and slideshows~\cite{storypoints,powerbi}.
+
+
+%\subsection{Comics for Data-Driven Storytelling}
+
+
+
+
+
+
+%Xia et al. proposed object-oriented interaction which further expands direct physical manipulation to abstract user interface elements such as attributes~\cite{xia2016object} and selections~\cite{xia2017collection}.  
+
+
+% WriteLarge https://dl.acm.org/citation.cfm?id=3025664
+% Tivoli  http://doi.acm.org/10.1145/263407.263508
+% Gather read https://dl.acm.org/citation.cfm?doid=2207676.2208327
+% Sketchpad https://dl.acm.org/citation.cfm?id=281031
+% Toolgass https://dl.acm.org/citation.cfm?id=260447
+% Put-that-there https://dl.acm.org/citation.cfm?id=807503
+% DataInk : to appear
+
+
+%Unleashing users’ creativity via their commonly held skills is a lasting theme in the area of human computer interaction [sketchpad, toolglass, put-that-there]. Recently research on direct pen and touch input has show promises.
+

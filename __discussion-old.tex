@@ -1,0 +1,57 @@
+\section{Discussion}
+
+\subsection{Limitations and opportunities for further improvements}
+\nam{reduce}
+The result of the user study, as well as our own experience of creating examples of data comics (\autoref{fig:examples}, illuminated further possible improvements of our tool. A common issue associated with any gesture-based tool is that it is difficult to figure out what operations are possible in the first place. As we observed in the user study, it could be initially confusing to users what gestures (pen or touch) are required to execute on which types of visual elements. This issue becomes more challenging when a visualization is the main content. The abstract form of the visualization lack natural affordances available in physical objects. It could be useful to come up with visual cues that can hint on available interaction modality, reducing the gulf of execution. Since people are used to using touch to manipulate objects, it would be useful to investigate in which parts touch feels more natural than the pen. 
+
+When it comes to creating a data comic, it requires an author to manipulate on fine-grained elements of the visualization (e.g., selecting and annotating a small set of elements). Most existing visualization tools employing multi-touch interaction for manipulating context operate at the visualization level. There is no established vocabulary for interacting the visualization content which usually consists of a  lot of small data points. Our decision to have multiple pen tools instead of fat fingers is still suboptimal as it often requires a significant number of mode switchings (e.g., creating a node label and positioning the node. Instead of requiring the mode switching, devising an intelligent mechanism to detect a user's intention could be a possible improvement. For example, when a user holds a panel, we can infer that the user is trying to manipulate its content, implicitly switching the pen type from a regular pencil to a control annotation pen. Another similar issue occurred when polishing the comic to create a final version for presentation. Although the flexibility of storyboarding in \toolname{} enabled rapid exploration of design alternatives, it lacks some precise control in aligning panels. We could provide an intelligent snapping of panels while still taking into account the gutter.
+
+\toolname{} currently only supports dynamic network datasets and two visualization types including a node-link diagram and unit chart. Supporting different types of datasets such as tables as well as other common visualization types such as bar charts and line charts would be valuable to further increase the expressivity and usefulness of our tool. Most of our design choices can be directly generalizable to most of them, while it may require some adjustments to incorporate varying affordances of different visualization types (e.g., freeform lassoing may not work well for matrix diagrams). While offering support for a full range of visualizations is not our scope, adding automatic geo-encoding can be a natural extension to the current tool.
+
+% Lessons learned from the user study and examples.
+
+% 1. Interaction: Function-first vs Selection-first
+% 2. Binding freeform annotations with data
+% 3. Other graphic design features. 
+
+% Acquiring pen tools implicitly, articulated with the opposite hand, such as  touching a panel, the pen acquires different tools. 
+
+
+\subsection{Leverage data to go beyond traditional comics}
+
+In this work, we only scratched the surface of the design space of authoring tools for data comics. We believe there are still fruitful rooms for innovations, in particular, by leveraging the underlying data to inform the design of the authoring tools. We hereby articulate a number of ideas based on the lessons we learned by building \toolname{}. 
+
+\toolname{} currently focuses on creating structural elements of data comics (visualizations, panels, etc). How can we support creating semantic elements such as narrative flow and narration patterns? Our current support for transitions and layout templates touches on this aspect but need further reflections on making them truly useful. Generating transitions that exactly match a user's expectation would be challenging, but it can be used as a way to exploring different narrative flows. Layout templates in \toolname{} generate empty panels. What can we do to fill the panels automatically or semi-automatically? As with transitions, we imagine it is unreasonable to automate the generation of narrative contents in an exact way that the user desires to. Thus, a mixed initiative approach would be a viable solution. For example, we necessitated a path between two panels to generate transitions between then. While one can attempt to predict next panels given a single panel, we seek the user's input as a way to reduce the search space.
+\nam{Work in progress, please feel free to chime in...}
+2. Transferring and sharing contents across the pages. Interactive data comics, nonlinear reading experiences through coordinated panels.
+
+2. The benefit of having access to the underlying data in a presentation-focused too. We originally developed our tool to be specifically used for authoring a data comic to communicate data not necessarily explore data. There is still a dichotomy between presentation-focused and exploration-focused tools. Presentation tool for data exploration. Blurring the line between presentation and exploration. There are new opportunities for integrating these two, which may lead to new types of tools (Pen + touch = new tools). Exploring story alternatives as a form of data exploration. Our observation in the user study showed that people used the tool to explore data. The ability to freely annotate and manage multiple panels provide a form of active reading capability~\cite{walny2018active}..
+
+% \begin{itemize}
+%     \item Exploration to Presentation
+%     \item Data Journalism \& Infographics
+%     \item Data-Driven Storytelling
+%     \item Narrative Visualization \& Genres
+%     \item Narrative Patterns of Visual Storytelling
+%     \item Science of Data-Driven Storytelling 
+%     \item Engagement, Memorability, Rhetoric, Sequencing
+%     \item Explorable Explanations, Personal Visualization
+% \end{itemize}
+
+% Patterns and templates
+
+% \subsection{Extrapolation}
+% Data binding -> Blurring exploration and presentation
+
+% Constructing a data story as a form of exploration
+
+% Different workflows (narrative -> evidence , evidence -> stories)
+
+% Recent technology advances are beginning to affect how comics are created and presented. For instance, the traditional page layout of panels is often replaced with a long vertical list of panels with scrolling~\cite{goodbrey2013digital}.
+% Combining multiple forms (e.g., interactive video, )
+
+% drawback of direct manipulation: can be slow, not good for repetitive tasks, error-prine and difficult to discover gestures 
+
+
+
+% Different shapes of panels invoke emotions 

@@ -1,0 +1,151 @@
+\section{DataToon}
+\label{sec:datatoon}
+
+storytelling  is creative, iterative process
+
+\subsection{Design Considerations}
+
+Why data-driven and what does it enable?
+
+Iterative design and consistency
+
+
+Our primary goal in this work is to design a tool for authoring \textit{data comics}[refs], which is about telling stories with data through visualizations in the form of comics. While comics is not the only way of telling data-driven stories, it has serval advantages over other narrative forms such as slide presentations, dossiers, and magazines. The main benefit of a comic is its form: an engaging arrangement of panels that contain unique combinations of text and visual imagery. The comic form is widely familiar and accessible to people of various ages and educational backgrounds, and has been proven to be effective in education and scientific communication~\cite{ref}. However, the potential of this form to communicate insights involving complex data by way of visualization has been largely underexploited.
+
+Our examination of what constitutes comics in \autoref{sec:related_work} reveals many similarities between the form of comics and the ways that people visualize data for data-driven storytelling. Previously, Bach~\etal\cite{bach2017emerging} considered data comics to be a new genre of data-driven storytelling and they classified four essential components of data comics: {\it visualization}, {\it flow}, {\it narration}, and {\it words \& pictures}. 
+Drawing from this work and on on our analysis of the comic form, we have identified the following design goals to inform the design of tools for creating data comics. The only component proposed by Bach~\etal that our design goals do not explicitly address is that of {\it narration}, as we feel that the the development of a narrative structure is an activity that occurs independent of any particular tool. 
+
+%; especially 
+%developing a good narrative (e.g., character or story arcs) is not considered and left for presenters.
+
+
+
+
+% \matt{edited Nov 2}
+% Our primary goal is to allow people to tell stories that leverage data visualization in the form of comic strips without resorting to programming or manual illustration. 
+% A comic is a compelling way to convey a data-driven story~\cite{bach2017emerging}, as it has several advantages over traditional media such as slide presentations, dossiers, and magazines. 
+% The main benefit of a comic is its form: an engaging arrangement of panels that contain unique combinations of text and visual imagery.
+% Often these panels are arranged in a sequence, with each panel revealing part of a larger narrative such as an event or a moment of dialogue between characters.
+% The comic form is widely familiar and accessible to people of various ages and educational backgrounds, and has been proven to be effective in education and scientific communication~\cite{ref}. 
+% However, the potential of this form to communicate insights involving complex data by way of visualization has been largely underexploited.
+% , except a few recent attempts. 
+
+% Our examination of what constitutes comics in \autoref{sec:background} reveals many similarities between the form of comics and the ways that people visualize data for data-driven storytelling. 
+% For instance, the use of textual annotation and the selective highlighting of elements corresponding to specific data points serve to draw the viewer's attention or provide context~\cite{ren2017chartaccent}. 
+% Moreover, a single chart or plot is seldom sufficient to communicate a compelling story; typically, multiple charts are juxtaposed, shown sequentially, or constructed in an animated stepwise fashion to reveal different aspects of the story~\cite{amini2017authoring,hullman2013deeper,satyanarayan2014authoring}.
+% or at least a visualization is constructed in a stepwise fashion to highlight different parts of the underlying data
+
+% Previously, Bach~\etal\cite{bach2017emerging} considered data comics to be a new genre of data-driven storytelling and they classified four essential components of data comics: {\it visualization}, {\it flow}, {\it narration}, and {\it words \& pictures}. 
+% Drawing from this work and on on our analysis of the comic form, we have identified the following design goals to inform the design of tools for creating data comics. 
+% The only component proposed by Bach~\etal that our design goals do not explicitly address is that of {\it narration}, as we feel that the the development of a narrative structure is an activity that occurs independent of any particular tool. 
+% Our design goals provide concrete guidelines with respect to how data visualization can be integrated into the comic form. 
+% Narration or developing a narrative is not considered and left for presenters. We focus on the form that contains the narrative.
+
+
+\bstart{Visualizations as pictures and annotations as words} 
+Data visualization is essentially a specific type of pictures, that is intended to convey meaningful information rather than random images. Like any picture, it can also take different levels of representations from realistic (e.g., volume rendering) to iconic forms (e.g., node-link diagram). Visualizations can have different styles such as highlighting specific elements to draw the reader's attention. 
+
+In the same vein, annotations are basically words, providing context, highlighting specific aspects, and explaining messages about the data being visualized. They can be headers, paragraphs, or texts directly on placed on top of visualizations (e.g., data labels); for the latter, often graphical elements such as highlighting circles and arrows. In data comics, they can be encapsulated as captions, speech balloons or even image words like onomatopoeia. 
+
+Visualizations and annotations together form the vocabulary of data comics. Just like pictures and words interplay in comics, visualizations and annotations also go hand in hand each other in visual data stories. A data comic editor should provide flexible ways to balance between visualizations and annotations. The ability to express diverse combinations of visualizations and annotations would determine the expressivity of the tool.
+
+\bstart{Leverage panels as containers for story pieces}
+
+Panels in data comics can be used to show different facets of data or key points in the story. They can play a role as an attentional unit to guide readers through the story [ref:cohn], as well as a structural unit to craft a narrative structure by breaking down the complexity of the story into easily digestible story pieces [ref:bongshin]. They may serve other decorative or rhetorical purposes as well [ref: hullman,cohn,benjamin]. 
+
+Unlike regular comics, panels in data comics are mostly driven by data, meaning that the content of panels is determined through the synthesis of visualizations and annotations. Thus, there may be no strict notion of moments in time and space in a realistic sense. Rather, the duration of the time and the dimension of the space are determined by the underlying data (e.g., spatiotemporal data). 
+
+There may be other types of panels that do not contain data but support understanding of the story. A data comic editor not only aids generating the panels but also provides variations of panel styles such as sizes, borders, or shapes. The stylistic variations are not essential, however as they do not affect the meaning of the story but rather stylistic choices.
+
+\bstart{Support flexible sequencing and juxtaposition of panels:}
+
+Story is essentially a ordered sequence of events (or story pieces) [ref:bongshin]. Thus, a single chart is seldom sufficient to communicate a compelling story; typically, multiple charts are juxtaposed, shown sequentially, or constructed in an animated stepwise fashion to reveal different aspects of the story~\cite{amini2017authoring,hullman2013deeper,satyanarayan2014authoring}. In data comics, panels are \it{spatially} arranged to iteratively introduce new aspects of the data and possibly more complex representations of data, transitioning from one panel to the next. A corollary of using comics is that it allows nonlinear reading.
+
+Similar to conventional comics capturing various forms of transitions (e.g., action-to-action or moment-to-moment), data comics has similar panel-to-panel transitions driven by data [ref:bach,hullman,kim].
+
+Bach el al (CG\&A):
+
+1. visualization-to-visualization, 2. moment-to-moment (temporal dimension), 3. detail-to-detail, 4. level-of-detail, 5. data-to-data (dimension), 6. visualization-to-context, 7 message-to-message
+
+Aside from data comics, there have been existing works on finding the effective sequence of visualizations minimizing the cognitive cost.
+
+Hullman et al (VIS'13, EuroVis'17):
+
+1. Dialogue (Question \& answer, 5W1H)
+2. Temporal (chronology, retrograde, flashforward)
+3. Causal (explicit cause, alternative reality?)
+4. Granularity (general to specific, specific to general)
+5. Comparison (dimension walk, measure walk)
+6. Spatial (spatial proximity)
+
+Temporal, granularity, comparison are more common; action-to-action is the most common in regular comics [mccloud].
+
+Preference ranking: 
+
+Temporal > (Dimension | Measure ) > Hierarchy
+
+Kim et al (CHI'17):
+
+Transitions among visualization specifications
+
+1. Transformation (scale, sort, bin, aggregate, filter), 2. Mark (change mark types), 3. Encoding (Move, add, remove, transpose channels like position, size, shape, color).
+
+To help readers to create closure (or reduce the cognitive cost), captions and speech balloons can be added to the panels. The consistency between panels would also help [bach,qu]. One way to support these transitions between two states is to insert transitionary panels that interpolate between them; we envision this to be a particularly useful and effort-saving aspect of any interactive data comic editor.The editor can also support the layout of the panels on a page similar to traditional comic books.
+
+
+\bstart{Take advantage of being data-driven, beyond traditional comics}
+
+Knowing the underlying representation of data comics opens up new opportunities for going beyond the traditional reading and authoring of comics. 
+
+
+1. reduce the repetition in the authoring process (duplicate etc)
+
+2. automating generation of panels and transitions between the panels
+
+3. data-driven annotations [chartaccent]
+
+4. maintaining consistency between panels [graphcomics] 
+5. style transfers
+
+6. interactive and nonlinear reading experience
+
+7. linking panels through highlighting
+
+Mention existing traditional comic editors:
+
+
+\rev{To be incorporated:}
+\bstart{Expressive visualization design choices} 
+for each type of data, there are many visual encoding choices that vary in terms of level of detail and degree of abstractness. 
+Accordingly, many visualization authoring tools provide ways to control visual encoding channels such as position, size, color, and shape, as well as data transformation tools that involve sorting, filtering, and aggregation. 
+The latter is particularly important in the case of storytelling and data comics in particular, as it is typical for stories to begin with a small subset of the available data presented in a simplified manner~\cite{segel2010narrative}. 
+
+\bstart{Establish flow with transitions and guidance}
+after establishing the context for a story in the first panel, a challenge is to guide the viewer along a narrative from one panel to the next, iteratively introducing new aspects of the data and possibly more complex representations of data.
+This is partly accomplished through the layout of panels, such as in a conventional grid format, or via some visual linking between non-adjacent panels.
+Conventional comics also capture various forms of transitions, such as changes in the level of detail, moment-to-moment changes, and scene changes~\cite{mccloud1993understanding}, transitions with analogs in the context of data comics~\cite{bach2017emerging}. 
+One way to support these transitions between two states is to insert transitionary panels that interpolate between them; we envision this to be a particularly useful and effort-saving aspect of any interactive data comic editor.
+
+\bstart{Rich annotation and highlighting options}
+conventional comics are abound with captions, speech bubbles, graphical embellishments as stand-ins for sound effects, and other forms of visual emphasis. 
+Analogously, a data comic editor must be able to richly annotate visual representations of data with text and symbols, providing context immediately where it is needed. 
+Furthermore, it must be possible to visually emphasize important aspects of the data, or conversely de-emphasize unimportant aspects of the data without removing them entirely from view. 
+
+% We want to leverage comics as a medium for visual, data-driven storytelling
+
+
+% Use Visualizations as Pictures, 
+
+% Use Annotations as Words
+
+
+% Transitions in comics and visualizations
+
+% Changes to data transformation (measures, dimensions, scaling, sorting, filtering, binning, and aggregation) and visual encoding channels (position, size, color, shape etc), visualization types (mark types). 
+
+% \paragraph{Use Visualizations as Pictures and Annotations as Words}d d
+
+
+% \subsection{\#2}
+
+% \subsection{\#2}

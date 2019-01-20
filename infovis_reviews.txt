@@ -1,0 +1,194 @@
+The Summary Review:
+
+We want to thank the authors for submitting an interesting paper for our consideration. As you can see, we had five reviewers with mixed impressions, some favoring acceptance, while three leaning towards rejection. We had a very lengthy conversation about this paper given the unique topic. At a high level, all reviewers agreed that the tool is well implemented and has some nice features, but there was concern about the contribution to the field as well as some serious weaknesses. Each review will provide details, but let me offer you a summary of the strengths and weaknesses.
+
+Strengths:
++ Data comics is an interesting topic that has potential to reach a broader audience
++ System is well developed and has some nice features
++ The interaction techniques are smooth and fluid, enabling lots of different capabilities
++ The use cases are nicely illustrated and described
++ The paper reads very well and is well organized
+
+Weaknesses:
+- Contributions are not clear
+- Many of the challenges with networks are not addressed. There was concern about scalability as well as network-specific characteristis that were not addressed.
+- An Application paper should be more than an instruction manual.
+- The paper did not define target users specifically, which made it difficult to be assessed. Depending on whether this tool is designed for professionals (e.g., journalists) or lay-persons, authors can choose different ways to assess the system as well. One comment that was made for instance is that if it was targeted for journalists would the tool limit to etend users' ability to create a variety of data stories. Moreover, is it easy to use? All of this could be addressed in a more detailed user study/evaluation.
+- Moreover, the expressiveness of the system is not well defined/described in the paper. If indeed the tool has specific, novel aspects that increase the expressiveness/usability while designing a data comic, authors need to specifically show the differences that the tool makes through an evaluation study. Further clarification is needed.
+
+Based on this assessment and following an extensive discussion, we lean towards a major revision. Addressing the weaknesses will help, but several specific recommendations were made:
+
+1) The authors need to clearly state the contributions upfront and prove how their design achieves the stated goals
+2) Ideally, they should achieve this with a proper evaluation. The authors have some space left in the manuscript and that could be used to clearly demonstrate the value to specific target users.
+3) Since networks are the focus, a more appropriate discussion of network specific challenges must be addressed.
+
+We recognise the potential novelty of the paper and we want to give the authors the opportunity to mitigate these issues. However, doing so goes beyond the scope of a conditional accept for this conference.
+
+----------------------------------------------------------------
+
+Reviewer 1
+
+Paper type: System
+
+Expertise: Expert
+
+Overall Rating: 2.5
+
+Supplemental Materials: Acceptable
+
+Justification:
+
+This paper presents DataToon an interactive pen+touch tool for authoring comics for dynamic networks. The presentation of this paper is clear and the figures are well crafted. Overall it is a nice paper. My major concern is regarding the contributions and novelty of this paper, and how well the tool can address the challenges mentioned in Section 2. It seems that DataToon makes incremental improvements.
+
+The Review:
+
+This paper presents DataToon an interactive pen+touch tool for authoring comics for dynamic networks. While I like the proposed tool, I’m still unsure about the extent of the challenges (in Section 2) that the tool can address. The tool seems a nice try but overall preliminary and incremental. It is unknown the size of the improvement that the new tool can provide in creating data comics than just using the existing tools.
+
+As introduced in the paper, the spirit of comics is “sequential art”, and this paper does focus on this aspect (more related to C3 and C4) by providing features like transition generation and narrative layout exploration. The transition generation is not explained in detail in the paper, and it lacks the ability of applying non-linear interpolation. Some existing tools have already addressed similar problems as reviewed in the related work. Moreover, although a layout template is provided, the whole process still relies on much manual work. It would be great that automated or semi-automated layout is offered.
+
+I also feel the features addressing the other two challenges (C1 and C2) are a bit incremental, too. For example, numerous tools have been developed to help users create expressive data visualizations such as Data-Driven Guides, Data Ink and Data Illustrator. Perhaps one advantage of DataToon is that panels are linked so the consistency of styles can be easily maintained. However, this is only limited to nodes and links. What about other aspects such as the background image? Take the example in Figure 4, if a user changes the style of a country or a label or an annotation, how does it propagate across the whole comic?
+
+In summary, DataToon sounds like a useful tool and the paper is really well- written. It is a nice integration of a bunch of features (many are existing), but the current limitations make the tool more or less incremental. This prevented me from giving a higher score.
+
+----------------------------------------------------------------
+
+Reviewer 2
+
+Paper type: System
+
+Expertise: Knowledgeable
+
+Overall Rating: 3.5
+
+Supplemental Materials: Acceptable
+
+Justification:
+
+This paper presents a web-based tool for producing data comics with a focus on dynamic networks. The tool employs a pen+touch interface and provides many interesting and useful features: data binding, temporal filter, panel transition, data/panel annotation, group highlighting, custom styling. The tool also provides a unified space for data exploration and story authoring. Therefore, I suggest to accept the paper with the following suggestions for improvement.
+
+The Review:
+
+Revisions Required:
+- I would like more discussion on how the tool addresses 4 research challenges, something similar to Section 5. What is 'expressiveness' anyway? Does it just mean a variety of visual representation?
+- Evaluation: I don't think the 'replication' task is a good one for evaluating such a system. Somehow, it also led to a quite descriptive results (participant X did Y and liked Z).
+- The tool chose to use pen+touch interface, which is good, but may prevent a broader adoption. I would like to have a discussion on the ability to extend the interface for traditional mouse+keyboard and tablet touch. Is it straightforward or impossible or somewhere in-between?
+- The tool provides a ton of features, but I find it a bit difficult to manage them. The overview description of DataToon in Section 4 can be expanded with a list introducing the most important features and rationale why they are important
+(adding functionality that other applications do not support is not very convinced).
+- Section 4.1: it would be useful to have a description of the dataset, what makes it suitable to demonstrate a dynamic network.
+- Data-binding makes the visual style of data points consistent. However, is such consistency too restrictive for storytelling? For example, I can start with circles for all countries, then when I want to emphasise on some countries, I will use flags.
+- The Future work is missing.
+
+----------------------------------------------------------------
+
+Reviewer 3
+
+Paper type: System
+
+Expertise: Expert
+
+Overall Rating: 3
+
+Supplemental Materials: Acceptable
+
+Justification:
+
+The authors present DataToon, an data comics authoring tool. The system enables the creation of highly expressive data comics via pen and touch interactions.
+
+Strengths
++ Data comics is an emerging technique for storytelling. DataToon provides a platform to rapidly create these data comics
++ The interaction techniques are smooth and fluid, enabling lots of different capabilities
++ The use cases are nicely illustrated and described
++ The paper reads very well and is well organized
++ Related work is well referenced
+
+Weaknesses:
+- My major concern about this paper is the focus on dynamic networks. DataToon is really a creation tool for all kinds of data comics not just dynamic networks. I therefore wonder why you focused on that
+- In terms of networks, I am concerned that the system will not scale to large networks. While the visual examples indicate small sized networks (10-100 nodes) it is unclear how data toon would handle and allow users to create effective comics with say 500 companies (I am thinking of the Fortune 500 for example)
+- This leads me to my second concern about networks. The paper doesn't address many of the nuances that networks bring with them. Temporal nodes and edges, multivariate attributes, and multiplex edge types. At least from my reading, DataToon doesn't allow that.
+
+Based on these potentially significant weaknesses, and thus a false positioning on dynamic networks, I am cautiously rating this a possible accept with a tendency of leaning towards accept given the novelty and coolness of the system.
+
+The Review:
+
+The authors present DataToon, a data comic authoring tool focused non dynamic networks. The paper is very well written and organized, positions the work nicely in related and relevant work, and motivates it from an expressive storytelling perspective. The system is terrific, the video supplement clearly shows the power, and the use cases are compelling. Overall, the paper is definitely worthy of acceptance.
+
+However, I do have some concerns, in particular since it is pitched as a system for dynamic networks. As I indicated above, my concerns are as follows:
+
+- DataToon appears to be really a creation tool for all kinds of data comics not just dynamic networks. I therefore wonder why you focused on that. What makes it explicit for dynamic networks and not other types of data comics?
+- In terms of networks, I am concerned that the system will not scale to large networks. While the visual examples indicate small sized networks (10-100 nodes) it is unclear how data toon would handle and allow users to create effective comics with say 500 companies (I am thinking of the Fortune 500 for example). Are there techniques/tricks that would allow a designer to use built-in layout algorithms or other techniques to position nodes on the canvas? This did not come out in the paper.
+- This leads me to my second concern about networks. The paper doesn't address many of the nuances that networks bring with them. Temporal nodes and edges, multivariate attributes, and multiplex edge types. At least from my reading, DataToon doesn't allow that.
+
+Perhaps it is too much to ask for DataToon to also be a network visualization tool. However, given that it advocates for dynamic networks, alternate layouts as well as visual encoding capabilities may be needed (you may have it, but not in the paper).
+
+I believe that the authors have developed a terrific system and it can make a fantastic contribution. Addressing my concerns would help get it over the hump. I wish the authors good luck with the revision.
+
+Summary Rating
+
+Possible Accept The paper is not acceptable in its current state, but might be made acceptable with significant revisions within the conference review cycle. If the specified revisions are addressed fully and effectively I may be able to return a score of '4 - Accept'.
+
+----------------------------------------------------------------
+
+Reviewer 4
+
+Paper type: Application / Design Study
+
+Expertise: Knowledgeable
+
+Overall Rating: 2.5
+
+Supplemental Materials: Acceptable
+
+Justification:
+
+This is a well-written and easy to follow paper. The work is fairly well motivated, and the tool is compelling. The main strength is in the working tool that will be hosted online. There are two main weaknesses, having to do with (1) the study design, including an omission of some key details and (2) lack of clear contribution. The issues I discuss do require some substantial revisions that are probably not possible within the review cycle and would benefit from further peer review.
+
+The Review: In this paper the authors present DataToon, a browser-based tool for creating data comics. Related work in this area is discussed and the tool is presented. A user study is also described. Overall, this paper is well written and easy to follow. The need for DataToon seems to be well motivated, and the user study appears to suggest that DataToon is valuable. However, I have a few issues, primarily related to (1) the user study and (2) the contribution, which need to be clarified:
+
+1. I would like to see more rationale for the design of the user study. Specifically, I’m curious about the choice of the 3 likert items in lieu of a more formal usability assessment. Additionally, what were the options on the likert scale? Was it low to high, disagree to agree, or something else? I’d also like to see more details about the interview. For example, what kind of interview? How many questions? It sounds like it may have been more of a survey than an interview, but it’s not possible to know.
+
+2. I’m not sure how useful it is to report the average of the likert item responses. The scale is really an ordinal scale, and taking an average of an ordinal set doesn’t make sense. For example, what’s the average of agree and somewhat disagree? One possibility is to report the distribution of responses, which would help readers see how many (if any) participants provided very low or high scores. This could be reported nicely with a bar chart, but of course space will be lost in the paper. In any case, I think the authors need to consider this issue more carefully, being very deliberate about what they want to communicate about the results.
+
+3. The two tasks that were given to participants were not representative of typical tasks that would be performed. This is specifically because they were replication tasks rather than creation tasks. Replication is very different from generating new comics from a set of data. This seems like such a critical point that I’m surprised it was not discussed very openly. I thin the replication task is okay as a first step, but the authors need to discuss the implications here.
+
+4. I would have liked to see a more in-depth discussion of the qualitative analysis of interview responses. Currently it is very difficult to determine how useful the interviews were. This is also because of the point mentioned above—i.e., no detail is given about how the interviews were conducted. Without a proper description of the analysis, the trustworthiness of the results that were provided is not clear. We don’t really know if the researchers were just cherry- picking the quotes that they preferred.
+
+5. The authors tested DataToon on a very large touch-based screen that accepts pen input. The problem here is that such screens are quite rare, and it’s not reasonable to expect typical users to have them. However, it’s probably not unreasonable to expect typical users to have smaller tablets with pen input. Thus, it would have been nice to see smaller tables included in the study. However, even without that, a discussion should be provided.
+
+6. The contributions of the work for vis researchers or practitioners are unclear
+(beside the tool itself). While I think it is easy to be too harsh on systems/application papers because they don't provide generalizable results, there certainly does need to be something valuable that others can take away from the paper. The following paper deals with this very issue:
+
+Weber, G. H., Carpendale, S., Ebert, D., Fisher, B., Hagen, H., Shneiderman, B., & Ynnerman, A. (2017). Apply or Die: On the Role and Assessment of Application Papers in Visualization. IEEE computer graphics and applications, 38(3), 96-104.
+
+In that paper, the authors outline 12 possible contribution types from application papers:
+
+C1: Put previous research contributions in an application context, and describe a combination of methods to accomplish a visualization/analysis objective. C2: Present valuable application-specific contributions, such as tailoring existing methods. C3: Provide a foundation for future visualization research, and pose research challenges. C4: Provide new means (datasets and evaluation criteria) for evaluating visualization methods. C5: Convey the “language” of the application domain and assessment methods for particular situations, thus facilitating deep collaborations with application professionals. C6: Enable the visualization community to learn how researchers in other communities approach problems as individual analysts and in collaboration with others. C7: Document successes and failures of visualization approaches for a given application domain, and derive lessons learned from the visualization expert's perspective. C8: Discuss both design methodologies and individual design decisions that have proven to successfully address the users' needs. C9: Create awareness in application domains of the importance of visualization. C10: Document a success story for dissemination, both inside and outside of the visualization community. C11: Describe innovation processes and commercial impact. C12: Contribute to a widespread understanding of visualization science.
+
+To me it seems like maybe the authors did a little bit of C1, although not in enough depth; maybe scratched the surface of C5, but also not in enough depth; and a little of C7 and C8, but not very systematically. Thus, I would argue that the paper does not meet the expectations for communicating contributions of the work. I am not saying that the work does not meet any of these contribution types; rather, I'm saying that the authors have not clearly communicated the contribution(s) of the paper.
+
+7. A few minor points:
+- missing citation under C3
+- “pen and touch interaction brings enhanced the feeling of direct engagement”—>odd phrasing
+- “making it cumbersome to manipulate using fat fingers”—>fat or not seems irrelevant. Why not just say “using fingers”?
+
+----------------------------------------------------------------
+
+Reviewer 5
+
+Paper type: System
+
+Expertise: Knowledgeable
+
+Overall Rating: 2.5
+
+Supplemental Materials: Acceptable
+
+Justification:
+
+The main issue is that the paper has little contribution to the InfoVis community. The system is developed well, and it also provides a nice use case with a video and a software copy. The main weakness is that the system does not show novel features that are generalizable to future research studies.
+
+The Review:
+
+In this paper, authors present a tool called DataToon, which helps designers to create data comins using pen and touch interactions. The tool seems to be designed and implemented well. The major weakness of this paper is the level of contributions that the paper makes to the InfoVis community. DataToon might be a useful tool for data toon designers. However, this paper does not provide novel findings, knowlege that can be generalizable to the future researchers in the community. The tool consists of interactive features that exist in other systems. Three (C2-C4) out of the four challenges described in Section 2, which serve as design goals, seem to touch upon issues related to user experiences on graphic user interface, which are not relevant to the InfoVis community. In C1, the term
+"expressiveness" was used vaguely, so it is difficult to measure how much expressiveness the proposed tool provides to the users. Since the main task of evaluation was to replicate the existing comics, it is even more difficult to prove the expressive power of the tool. The interactive features and a vareity of functions are reasonably chosen, but they are not novel enough to make significant contributions.
+
+Authors may need to rethink the contributions of this paper. In the current state, the paper provide plain description of the tool, which does not show significant contributions to the InfoVis community. If indeed the tool has specific, novel aspects that increase the expressiveness/usability while designing a data comic, authors need to specifically show the differences that the tool makes through an evaluation study.

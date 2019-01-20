@@ -1,0 +1,200 @@
+===========================================================
+Reviews of 1744 DataToon: Drawing Dynamic Network Comics With Pen + Touch Interaction
+===========================================================
+
+Reviewer 4 (AC)
+Expertise: Knowledgeable
+Recommendation: Between neutral and possibly accept; 3.5
+
+1AC: The Meta-Review
+
+Dear Authors,
+
+This paper received three carefully written and thoughtful reviews as well as a lengthy discussion. While R3 and R1 are quite positive on the paper, R2 raises important concerns that we would like to see the authors expand upon. Below I summarize the positive and negative aspects highlighted by the reviewers in their detailed reviews as well as those brought up in the discussion.
+
+Positives
+
+(+) All reviewers agree that this is a well thought out and executed system for more closely connecting storytelling with data analysis though comics to address the current divorce between analysis and communication. R2 notes, “DataToon addresses this gap in a compelling way.” While the system itself stands as the primary contribution, R3 points out that “…automated keyframing and panel recommendation techniques are particularly thoughtful additions to the work.”
+
+(+) The paper is well written and the system is polished. As R2 observes, “…the system and paper figures demonstrate an incredible attention to detail…”
+
+
+Negatives
+(-) All reviewers agree that the work represents a somewhat limited contribution to the research community. R3 states, “...the scope and contribution beyond existing systems is narrow…”
+
+(-) R2 is particularly concerned over the “expressivity” of the system as it is limited to a single “network” data type. R2 states, “…all 4 comics in Figure 7 seem to share the same core visual forms…and the narrative structures do not seem very different.”
+
+(-) All reviewers express concern over the evaluation and expansion on system expressiveness. 32 notes, “…this evaluation is not presented until the discussion and even this is presented without substantial discussion.” R1 adds, “…there is more that can be said about expressivity in data visualization.” Finally R2 laments,”…a more rigorous evaluation of expressivity might engage lay readers to rate and comment on the quality of the output.”
+
+MB >> an open-ended expressivity evaluation with authors' own data is logistically not possible at this time (and difficult due to MSR's new R&C protocols for data protection) 
+
+(-) Both R2 and R3 comment on shortcomings in the reproduction study with regards to the Likert scale data and participant population. R2 notes, “…such a small, homogenous participant pool makes it difficult to get much signal from their qualitative comments.” R3 adds, “…the Likert questions provide little meaningful data without a substantive comparison to other approaches…”
+
+MB >> de-emphasize Likert results, focus on qualitative
+
+Overall, the reviewers like the work, but would like to see a few aspects addressed in the rebuttal phase. All papers are entitled to a 5000-character rebuttal to address any misunderstandings or factual errors in the reviews.
+
+Should the authors choose to write a rebuttal, I recommend addressing the following in addition to any other relevant reviewer comments:
+
+1. Clarification of the research contribution (beyond the system itself) by more thoroughly articulating the insights gained from the process of creating and evaluating DataToon
+2. A deeper discussion of the expressivity of DataToon
+
+===========================================================
+
+Reviewer 3 (2AC)
+Expertise: Knowledgeable
+Recommendation: I would argue for accepting this paper; 4.0
+
+Review
+
+This paper discusses the DataToon system, a pen and touch based interface for generating data comics of dynamic networks. The paper overall introduces an interesting and timely system. The manuscript is generally well-written and offers a novel step towards accessible tools for visualization authoring. Overall, the scope of the contribution beyond existing systems is narrow, but appears sound. 
+
+The automated keyframing and panel recommendation techniques are particularly thoughtful additions to the work. As part of the most laborious pieces of generating these visualization types is correctly implementing new frames and generating reasonable keyframes, the inclusion of automated methods for doing so for dynamic data like these networks offers a useful general way for thinking about how these techniques might support novel content authoring approaches. Additional details about how authors could edit these frames would be useful. 
+
+MB >> editing keyframes shown in Video
+
+The design as implemented is directly tailored to dynamic networks. Given the interface already appears complex, it seems unclear how well this particular approach would scale to other visualizations and mark types. A speculative discussion grounded in the interview results would be beneficial for understanding what components of the DataToon approach can scale beyond the existing focus and which should be rethought. 
+
+MB >> mark design is customizable! other data types beyond (dynamic) networks and unit charts is beyond scope; did interview Qs even include those about other data types?
+
+Figure 2 seems quite complex. The prose appears to suggest that this is a literal replication of the DataToon interface; however, inspecting the figure, it seems that the figure contains both illustrations of interactions and raw panels. If this is the case, splitting the figure into a screenshot of a data comic and then component interactions would be useful. If not, evidence from the interview study related to the relative complexity of the interface would help to elucidate trade-offs in the current design. 
+
+MB >> promise to refine annotations in figure, refine caption, also, refer to the video 
+
+The evaluation discussion mentions an expressiveness evaluation in the opening paragraph; however, this evaluation is not presented until the discussion and even then is presented without substantial discussion. As a result, including it as part of the evaluation seems of little value. The expressiveness should either be discussed in substantive detail as part of Section 6 or left for the discussion.
+
+MB >> I moved the 'Example Gallery' paragraph about expressiveness to Section 6 just before the deadline, but this change is not in the submitted version.
+
+The interview evaluation leverages a thoughtful balance of prior skills (split amongst designers and data analysts). However, the Likert question provide little meaningful data without a substantive comparison to other approaches, especially given that participants are generally biased to report more favorably when working with a system built by the experimenters. These results are not likely robust nor informative and should be removed from the manuscript. 
+
+MB >> remove Likert results?
+
+Minor suggestions include: 
+* The current related work reads like a listing of existing systems. More thoroughly contrasting these systems with the contributions of DataToon would be helpful for scoping the contribution of the work. 
+
+MB >> existing systems incompatible w/ dynamic networks
+
+* A suite of interactions are described, but there is no mention of where the interaction primatives nor set of collective operations are derived from. A discussion of the source of the interactions and operations would assist with understanding usability and completeness. 
+
+MB >> emphasize references to Ken + Bill's work?
+
+* position in space(Figure 1F)--missing a space
+* overview + detail--overview+detail
+* When selected one---When selected
+* This helps authors get become--This helps authors become
+* The symbols related to session timing should be ~ rather than the double tilde
+* as well its' efficiency--as well as its efficiency
+
+===========================================================
+
+Reviewer 1 (reviewer)
+Expertise: Knowledgeable
+Recommendation: I would argue for accepting this paper; 4.0
+
+Review
+
+Significance & Originality:
+
+Datatoon is blends data-visualization with graphic story-telling, an important tool to make it easier for those working with data to create engagement and impact by communicating their work in a way that is easily understood by most, if not all, people. I have not seen a tool that attempts to enable comics authoring with data, and as such it can be considered a novel contribution. It also stands apart from current expressive data-visualization tools.
+
+The main contribution is the tool itself, but I also feel there is an important contribution to the field of science communication – generating impact is of the utmost importance in research, so this is not only a tool for research but a tool for impact. It also makes use of the fact that comics are an accessible format for most.
+
+Validity of the work presented: 
+
+The work is applicable to a range of HCI researchers, from those interested in qualitative tools, to dedicated data scientists, and its creation fills a meaningful gap between visualization and presentation of data. I can see this tool being used not only within the community, but in industry as well, should it be launched as a product when further data types are supported.
+
+I do appreciate it is hard to find participants, but 8 is a rather low number for proof of concept/user study. However, the attention given to the types of participants (data vs design) is interesting – a larger data set may have given some further insights as to the needs of these diverse groups though. In this case it is likely that the feedback was enough to gather data to improve the tool, but if this was the main goal (other than checking it was usable by non-authors) then this should be more explicit.
+
+MB >> emphasize targeted expertise of participants, logisitically difficult to find them, and the length of time spent with each one 
+
+The addition of the test version of Datatoon in the supplemental materials is helpful for those wishing to try the program themselves, however, I feel it is strange not to include the final version? If the amendments as suggested by the participants have already been made, why is the new version not available instead?
+
+MB >> explain restrictions in MSR R&C process
+
+Presentation clarity: 
+
+I have a few minor/small points regarding the structure and content of the paper that I think can be easily addressed prior to camera ready, should this work be accepted.
+
+Firstly, I would like an explanation of what a dynamic network is in the introduction – this is not clear for a novice reader.
+
+MB >> yes, easy to add
+
+There is a small error in grammar – “Generate”, not “generating” (line 139)
+
+Absolutely love the inclusion of icons inline with the text – really supports the concept of visual narrative – a kind of “meta” way of going about the paper’s own storytelling. However, I do find it quite difficult to visualise the stages in my head later on whilst reading about the interactions – makes one wish there was a data-comic for the actual paper (maybe something to think about later).
+
+MB >> watch the video!
+
+I do wonder if the usage scenario might be better placed after the main tool outline where the tools are all summarised. I do see why the usage scenario section is first, having reached the end of the paper, but if the layout of sections is to remain ‘as-is’, I would like better signposting of the paper layout in the introduction of the paper, or after Related Work.
+
+MB >> sure, if space permits
+
+Where the authors introduce the user study, it would be helpful to explain why participants used an earlier version of Datatoon before the later section, the placement in this section of the paper is confusing as the reader is essentially going backwards to an earlier iteration of the work. E.g. In the Improvements section, the authors tell us how they used the feedback to make improvements – this makes it clearer why there perhaps was not a larger scale user study (a proof of concept?) but this feels a bit out of place in the story… like it could have been in the first section of the paper. 
+
+MB >> for presentation clarity, we could drop discussion of app versions
+
+Co-authors and co-workers should be hyphenated (lines 898-899)
+
+The discussion section on expressivity feels like it has been cut and does not address the points raised. There is more that could be said about expressivity in data visualization – especially given its importance in traditional comics creation, and the new tools that are being developed to address this.
+
+MB >> an open-ended expressivity evaluation with authors' own data is logistically not possible at this time (and difficult due to MSR's new R&C protocols for data protection) 
+
+In figure 7 – I would like to know which comics were created by co-authors, co-workers and participants – were any of the participant comics good enough?
+
+MB >> created by authors. participant comics were recreations.
+
+I look forward to seeing future iterations of this tool which address different types of data visualization, and improve the tool following more detailed feedback from additional user studies. I hope that the feedback is helpful and that most of the points raised can be addressed as I believe this work has a place in the CHI community and I would enjoy seeing it presented at the conference.
+
+Relevant previous work:
+
+The Related Work is succinct and to the point, but I would like to see a small introduction on comics authoring tools before the detailed sections relating more to data-comics. For example, there are those who have sought to make digital comics authoring tools that are absent from the references (these are some examples):
+
+Farah Nadia Azman, Syamsul Bahrin Zaibon, and Norshuhada Shiratuddin. 2015. Digital storytelling tool for education: An analysis of comic authoring environments. In International Visual InformaticsbConference. Springer, 347–355.
+
+Ricardo Lopes, Tiago Cardoso, Nelson Silva, and Manuel J Fonseca. 2009. Sketch-based interaction and calligraphic tags to create comics online. In Proceedings of the 6th Eurographics Symposium on Sketch-Based Interfaces and Modeling. ACM, 13–20. https://doi.org/10.1145/1572741.1572745
+
+Chris Martens and Rogelio E Cardona-Rivera. 2016. Generating Abstract Comics. InbInternational Conference on Interactive Digital Story-telling. Springer, 168–175.
+
+Carlos Evia, Michael Stewart, Tim Lockridge, Siroberto Scerbo, and Manuel Perez-Quinones. 2012. Structured authoring meets technicalbcomics in techcommix. In Proceedings of the 30th ACM international conference on Design of communication. ACM, 353–354. https://doi.org/10.1145/2379057.2379123
+
+MB >> interesting references to know about!
+
+===========================================================
+
+Reviewer 2 (reviewer)
+Expertise: Expert
+Recommendation: Between possibly reject and neutral; 2.5
+
+Review
+
+This paper presents DataToon: a pen+touch system to author data comics of “dynamic” networks. I applaud the authors for an highly polished submission: the system and paper figures demonstrate an incredible attention to detail, and a very pleasing aesthetic. Moreover, the paper itself was a very accessible read. The introduction and related work do an excellent job of identifying an underexplored part of the design space of visualization systems: existing systems divorce data analysis from communication, making it difficult for users to rapidly move between these two phases, and are restricted to constructing linear narrative structures. DataToon addresses this gap in a compelling way. 
+
+The system design also appears sound, combining several well-studied aspects of pen+touch interaction centered on the “pen writes, touch manipulates” mantra from Hinckley et al. In particular, a modal interface determines the pen’s operation, pan & zoom gestures can be used to lay out panels or their contents, and touch gestures can be used to manipulate elements. A couple of novel system components target this the chosen domain more specifically including an interpolation (“magic”) mode that produces additional panels in between a start and end point, as well as a facility for suggesting panels based on interesting subnetwork patterns.
+
+Despite these strengths, I’m unable to return a higher score for three main reasons:
+
+1. The reproduction study is disappointingly cursory. Only 8 participants were recruited, and though their data and design experience varied, they all shared the same basic background of being employees of a large US-based software company. Such a small, homogeneous participant pool makes it difficult to get much signal from their qualitative comments. Moreover, a lack of explicit reporting of Likert ratings makes it difficult to know how to interpret some of the negative results. For instance, it is reported that “participants found DataToon to be easy to learn and use and they enjoyed using it” but immediately after it seems 5 participants (P2, 4-7, i.e. all analysts with minimal design tool experience) had non-trivial difficulty and frustration with the interface. Is this really a successful outcome? Moreover, while it’s good to see that participants reported that DataToon was “unique” and “fun,” it would have been good to see a more sober analysis that accounted for the novelty of such an interface (e.g., did any participants have prior pen+touch experience and, if so, what did they think qualitatively; and, if not, why were no such participants recruited?). 
+
+MB >> drop Likert results? Do we have their pen+touch experience?
+
+2. The expressivity of the system seems extremely limited. All 4 comics in Figure 7 seem to share the same core visual forms (nodes, links, images, and captions/annotations) and the narrative structures do not seem very differently. The paper does acknowledge expressivity as a limitation and opportunity for future work, but it’s unclear to me that its current capabilities are sufficient for acceptance at CHI. One lightweight way to prove this would be to not only generate a more diverse range of data comics. A more rigorous evaluation of expressivity might engage lay readers to rate and comment on the quality of the output. 
+
+MB >> We need more authors, and stories. All of the examples were tool-driven, not really story-driven.
+
+3. Finally, while DataToon usefully adds an entry to the space of narrative visualization design systems, this paper does not yet make clear what a research audience should learn from its development. The body of the paper reads primarily as a technical report of the system’s capabilities, with associated justification of why each piece of functionality is needed (i.e., what it enables). However, what is lacking is an underlying insight into why this system is not a straightforward composition of previously known aspects of pen+touch interaction and narrative visualization design systems. For example, the introduction stridently claims that existing tools “do not take advantage of the comic form as a storytelling medium” but it’s unclear how this focus enables a new kind of interaction model in DataToon. Could Tableau Story Points or Ellipsis' not be adapted, for instance, to target panels on a canvas instead of a linear pager? Similarly, how does the focus on dynamic networks inform the system design (beyond the ability to suggest interesting subnetwork patterns)? If an alternate data type was chosen, would it have yielded a dramatically different design? Answering such questions would generate insights that would, I imagine, be of greatest interest to a research community.
+
+MB >> these are good points... Need to ponder responses.
+
+More minor points:
+
+* The definition of “dynamic” networks was never made explicit, which made it confusing to understand the analogy to dynamic characters in traditional comics. I think the authors mean time-varying networks? 
+
+MB >> yes, easy to add
+
+* I appreciate that the system was provided as supplementary material, and I was even able to get it running without much effort. But, perhaps consider supplying some example data as well? When I dragged and dropped commonly used network data (e.g., Les Mis) into the tool, it complained of an incorrect structure. I wasn’t able to figure out what format it expected the data to be in and, thus, disappointingly wasn’t able to actually try it out.
+
+MB >> we shouldn't have included the tool as supplemental material (it didn't go through the MSR release process). Despite this, example data or a readme for preparing data should have been included. 
+
+* It would have been good to see the “magic” tool discussed in more detail. How does path discretization occur? Is it dependent on the position of the start and end panels? How does it account for overflow in a grid if the start and end panels are spread out overs different rows/columns? Etc.
+
+MB >> explain with another sentence or two; also shown in video

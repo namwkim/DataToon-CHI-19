@@ -1,0 +1,268 @@
+\section{Design Considerations}
+\label{sec:data_comics}
+To preface a discussion of \toolname{}'s architecture and interaction design, we summarize four design considerations motivated by related work and the visual language of comics.
+% to create stories about dynamic network data; and (2) support storyboarding and rapid iteration for data-driven storytelling. 
+% These considerations were informed by principles for comics~\cite{mccloud2011making,eisner2008comics} and data comics~\cite{bach2017emerging,bachdesign} and pen and touch interactions~\cite{hinckley2012informal,hinckley2010pen}.
+
+% \bpstart{D1.1 - Enable easy creation of panels } 
+
+%  A panel is a basic communication unit in comics. Reading panels in sequence enables the reader to gain multiple insights and comprehend a higher-level and a more complex story about the data. \toolname{} allows users to rapidly generate multiple panels of visualizations through simple drag and drop or drawing a rectangle. Users can easily duplicate or filter data within one panel to build the next panel.
+ 
+ 
+ 
+%  in various ways through drag and drop or simply drawing a rectangle. 
+
+
+% , serving as a window of information. Each panel represents a delimited space and time in the narrative and controls the duration of attention and affects the pacing of the narration~\cite{caldwell2012comic,duncan2000toward,duncan2015power}. 
+
+
+% In data comics, reading panels in sequence enables the reader to gain multiple insights and comprehend a higher-level and a more complex story about the data.
+
+
+
+% What is the panel.and why panels?
+
+
+
+
+% \bpstart{D1.2 - Assist with creating transitions between panels} 
+
+
+% \bpstart{D1.3 - Support data-driven, textual, and visual annotations}
+
+% \bpstart{D2.1 - Support rapid spatial manipulation of panels} 
+
+% \bpstart{D2.2 -uggest data pattern panels for story discovery} 
+
+
+% \bpstart{D2.3 - Suggest data pattern panels for story discovery}
+
+
+
+
+\bpstart{C1 - Use panels to encapsulate facets of data} 
+A panel represents is a discrete communication unit in a comic. 
+Each panel represents a delimited space and time in the narrative; its size and information density dictates the duration of the reader's attention and affects the pacing of the narration~\cite{caldwell2012comic,duncan2000toward,duncan2015power}. 
+% In data comics, reading panels in sequence enables the reader to gain a series of insights and comprehend a higher-level and a more complex story about the data.
+We therefore need to reduce the complexity of dynamic network data into multiple panels, where each panel may integrate visualization and explanatory text to convey an insight about the data. 
+However, with multiple panels comes a need for consistency in visualization design choices across them~\cite{qu2018keeping}, akin to how characters remain identifiable throughout a comic book.
+% To avoid confusing the reader and leading to incorrect decoding of the information, \toolname{} uses underlying data to maintain consistent visual representations across panels (e.g. same shapes for each data point or same color for a specific data dimension) ~\cite{qu2018keeping}.
+
+% Leveraging data bindings, it maintains consistent visual representations (e.g. same shapes for each data point or same color for a specific data dimension) across panels to avoid confusing the reader and leading to incorrect decoding of the information~\cite{qu2018keeping}
+
+
+\bpstart{C2 - Establish flow with transitions and layouts}
+As important as determining the content of each comic panel may be, their sequence and arrangement in space is equally important, altogether forming what McCloud describes as a \textit{sequential art}~\cite{mccloud1993understanding}. 
+Panels in comics are sized and juxtaposed in creative ways to place varying emphasis on a set of isolated moments~\cite{mccloud1993understanding,eisner2008comics}. 
+Readers use their imagination to fill the gap between these moments, a process of reading called \textit{closure}~\cite{mccloud1993understanding, duncan2015power}. 
+This is often accomplished with panels that serve as intermediary transitions between two panels conveying successive narrative points~\cite{caldwell2012comic}, which in turn affects the number and size of other panels on the page. 
+% do not take into account the global layout of the panels on a page but focus mainly on the content of adjacent panels
+Given this characteristic, we need to provide storytellers with flexible ways to generate, populate, resize, and rearrange panels so as to advance a narrative and provide the reader with closure.
+% Achieving a compelling narrative in an optimal layout requires a delicate balance between the number of panels, their size, and ratio in addition to their arrangement in space, which in turn might require adjusting their content and order. 
+% \toolname{} provide templates for common layouts to assist with scaffolding narrative structures.
+
+%\matt{leave descriptions of our solution out of the design considerations}
+% In \toolname{}, users can easily duplicate or filter data within one panel to build the next panel, and manually arrange panels to progressively advance the narrative in sequence. To facilitate closure, \toolname{} offers an automatic generation of transitions between panels, and also suggest potentially interesting panels for story discovery. 
+
+
+
+
+
+% The essence of comics lies in the sequence of panels as it is often as \textit{sequential art}.
+
+% anels in comicsare spatially juxtaposed to convey a story
+
+% The panels are spatially juxtaposed to convey a story as a collection of unconnected moments. 
+
+% both time and space (e.g., two consecutive panels may represent dif a story as a collection of moments
+
+% both time and space, offering a jagged, staccato rhythm of unconnected moments~\cite{mccloud1993understanding,eisner2008comics}. The author creates the white space between panels, the \textit{gutter}, while readers use their imagination to fill the gap between the isolated moments, \textit{closure}~\cite{mccloud1993understanding}. 
+
+% In data comics, reading panels in sequence enables the reader to gain multiple insights and comprehend a higher-level and more complex story about the data. \toolname{} assist authors with not only deciding on the content of each panel but also arrange multiple panels in space to construct a narrative. Users can easily copy one panel or filter data within to build the next panel. \toolname{} also automatically suggest starting or transition panels.
+
+%the phenomenon of observing the parts but perceiving the whole~\cite{mccloud1993understanding,duncan2015power}.
+
+
+
+\bpstart{C3- Allow narration with rich annotation options}
+The highly custom combination of words and pictures is another characteristic that makes comics distinct from other narrative mediums~\cite{saraceni2003language}. 
+They are coordinated to create different narration styles, including word-specific, picture-specific, and inter-dependent combinations~\cite{mccloud1993understanding}. 
+Analogously in data-driven storytelling, visual and textual annotations play an essential role in helping readers grasp the insight and its context, which visualization cannot often accomplish alone. Thus we require both explanatory captions as well as expressive data-aware annotations for labeling and highlight elements of a dynamic network. 
+% \matt{what, not how in this section}
+% Users can also perform freeform sketching to customize visual marks in line with the semantics of the data or add graphical embellishments emphasizing important aspects of the data.
+
+
+
+% he perception of the narrative to readers (e.g., pacing, reading order) can be different depending on the physical layout of panels~\cite{cohn2014architecture}. 
+
+
+
+
+
+
+
+
+
+% cognitive costs in traisitions
+
+% crafting a narrative structure
+
+
+\bpstart{C4 - Enable rapid and iterative storyboarding}
+Like any storytelling medium, the production of a comic is a creative and iterative process. Thus it is crucial to provide a flexible design environment facilitating the rapid prototyping of story ideas. Having control in the design process is also important to support those with different workflows.
+For instance, one person may want to begin by exploring their data, while another person may begin with a preconceived narrative, thereby necessitating both space to experiment and space to collect and arrange panels into a narrative order.
+% \toolname{} uses a canvas metaphor to provide a flexible storyboarding environment in which users can freely collect, annotate, and organize panels generated from data to experiment with different stories quickly. It uses pen and touch interactions as a primary interaction modality to further amplify the expressivity and fluidity of the environment. 
+% \matt{what, not how in this section}
+
+% For example, one may take a bottom-up approach by starting with exploring data to generate story pieces and iteratively constructing a narrative. On the other hand, a different individual may prefer to begin with a specific story in mind and find relevant visualizations that fit the story~\cite{bachdesign}. In most cases, a design process may interleave both top-down and bottom up approaches~\cite{bigelow2014reflections}. 
+
+
+% ---
+% Our goal is two-fold: 1) leverage the form of comics to create data stories, 2) support storyboarding and rapid iteration for data-driven storytelling.
+
+% 1.1) Enabling easy creation and styling of coordinated data panels
+% 1.2) Assisting in the creation of transitions between data panels 
+% 1.3) Supporting graphical, textual and data-driven annotations and captions
+
+% 2.1) Enabling free-form sketching and storyboarding
+% 2.2) Supporting fast browsing, selection and spatial arrangement of data panels
+% 2.3) Generating data panels from data patterns to fuel the story-making process
+
+
+
+
+
+% To facilitate rapid and flexible storyboarding
+
+% In data storytelling, 
+
+
+%  by starting with exploring data to generate story pieces and iteratively constructing and refining a narrative.
+ 
+ 
+
+
+% By leveraging natural human sketching and manipulation skills, pen and touch interaction brings enhanced the feeling of direct engagement compared to manipulating configurations and parameters through WIMP UIs.
+
+
+
+% Story
+% Support flexible sequencing and juxtaposition of panels
+
+% suggest starting panels suggest story pieces
+
+%It is distinct from animation or video in that images in such form are sequential in time not spatially juxtaposed as comics are~\cite{mccloud1993understanding,groensteen2007system}.
+
+%To motivate our design for \toolname, we first reflect on the challenges in creating data comics, based on our own experience in crafting them and research to guide their creation~\cite{bachdesign}. 
+% Comics is a well-established storytelling medium~\cite{mccloud1993understanding,eisner2008comics}, used in many contexts such as storyboarding~\cite{haesen2010draw,moraveji2007comicboarding}, science education~\cite{green2010graphic,tatalovic2009science}, or information communication~\cite{caldwell2012information}. 
+% McCloud, a comics theorist, describe comics as \textit{juxtaposed pictorial and other images in deliberate sequence, intended to convey information to the viewer}~\cite{mccloud1993understanding} or, to put it simply, \textit{sequential art}. It is different from a movie or animation in which images are sequential in time not spatially juxtaposed. Recently, Bach et al investigated the potential of this genre in communicating data and discussed how data and visualizations are integrated into the comic form to create \textit{data comics}~\cite{bach2017emerging}.
+
+
+% Comics is a well-established storytelling medium~\cite{mccloud1993understanding,eisner2008comics}, used in many contexts such as storyboarding~\cite{haesen2010draw,moraveji2007comicboarding}, science education~\cite{green2010graphic,tatalovic2009science}, or information communication~\cite{caldwell2012information}. 
+% McCloud, a comics theorist, describe comics as \textit{juxtaposed pictorial and other images in deliberate sequence, intended to convey information to the viewer}~\cite{mccloud1993understanding} or, to put it simply, \textit{sequential art}. \textit{Data comics} employ sequences of annotated visualizations to communicate insights about data to a viewer. Crafting data comics raise unique challenges, which motivated the design of \toolname. This section describes four challenges based on our own experience in crafting data comics and the research we conducted to help others create them~\cite{bach2016telling,bachdesign}. 
+
+
+% \textbf{C1 - Crafting Expressive Data Visualizations}
+% Most characters depicted in comics exhibit some human traits, if caricatured, and generally use words in speech balloons and captions to tell their story. By analogy, data comics seek to visually portray some aspects of the data and may use text to reveal underlying values or dimensions to convey higher-level insights.  Crafting expressive, unique and memorable visuals in line with the semantic of the data and tailoring the level of details of the representation to the message to convey are not well supported by data visualization creation tools and thus require graphics design software support akin to infographics~\cite{bigelow2014reflections}. Creating accurate visual representations of the data may then be tedious and error-prone to achieve. As data comics also closely integrate textual annotations and captions to reveal underlying data values, dimensions and filters also introduces additional efforts and sources of potential inconsistencies.
+
+%However, other considerations play a part when crafting data comics such as , and . These considerations are not well-supported 
+% updating these annotations as data is. 
+
+
+%Words and pictures together make the vocabulary of comics~\cite{mccloud1993understanding}. The way in which words and pictures cooperate is unique in comics (e.g., word-specific, picture-specific, and inter-dependent combinations)~\cite{saraceni2003language,mccloud1993understanding}. Words in comics are mostly represented as \textit{speech balloons} or \textit{captions}, while often integrated into pictures and treated graphically to convey moods or sounds (e.g, onomatopoeia) ~\cite{eisner2008comics}. Pictures can take different levels of representations from realistic to abstract. 
+
+%In data comics, visualization and annotation are special forms of words and pictures. The current dichotomy between visualization construction tools and graphic design tools prevent effectively balancing these two, which is critical to data comics. This is akin to the authoring of infographics. Existing visualization tools lack support for generating custom styles and adding freeform graphical elements, forcing designers to go back and forth with graphic design tools~\cite{bigelow2017iterating}.
+
+
+% (e.g., information visualization is iconic and abstract). 
+
+% \nat{This is akin to infographics. This is why data visualization tools are not enough, they do not help generate the style (e.g. drawing, import shape per data points) and the words (labels, titles captions, etc). So designers have to go back and forth with graphic tools like illustrator~\cite{bigelow2017iterating}.}
+
+% \bstart{C2 - Breaking Down Information into Panels}
+%- multiple panels require to have consistency between different content, changing something in one has to be impacted in others. color in two panels cannot mean different things.
+%As in comics, data comics break down a narrative into a series of panels arranged in space. 
+%, focusing the reader's attention and minimizing misinterpretation. 
+% A panel is  a basic communication unit in data comics, ideally conveying a simple single insight about the data. Reading panels in sequence enables the reader to gain multiple insights and comprehend a higher-level and more complex story about the data. Thus, deciding on the content of each panel, their sequence and arrangement in space is the basis of data comics design. This process requires the creation of multiple views of the data that each accurately represent different aspects or subsets of the data (e.g. filtering data), possibly adjusting the level of details (e.g. aggregating data) to best convey a point. 
+
+% In addition to the sheer effort required to generated these multiple views, authors also need to provide consistent visual representations across panels to avoid confusing the reader and leading to incorrect decoding of the information~\cite{qu2018keeping}. Maintaining this consistency (e.g. same shapes for each data point or same color for a specific data dimension) across all panels is particularly costly if changes are made late in the authoring process as it requires updating all relevant panels. Assisting with these post-hoc changes however may prove particularly important for data comics, as existing comics may often need to be updated to include more recent data for example.
+
+%for multiple elements can be extremely tedious and requires manual iterations if no data bindings are leveraged such as in a design tool. For example, updating a visual encoding such as using a different shape or color requires updating all the relevant panels. 
+
+
+%Panels are mostly represented as framed rectangles and arranged in an orderly fashion. Each panel represents a delimited space and time in the narrative and controls the duration of attention and affects the pacing of the narration~\cite{caldwell2012comic,duncan2000toward,duncan2015power}. It may have a different size, shape, border style (e.g., inset or vignette), which can induce a different reading experience. For example, a long stretched panel creates a feeling of a long time span~\cite{eisner2008comics}). 
+
+
+
+%Managing and arranging multiple panels of visualizations is important in data comics but not addressed well in existing tools. For example, a user may want to break down the complexity of data into multiples to focus on one aspect of the data at a time and progressively reveal the narrative. This story authoring aspect requires more thoughtful design than merely supporting the creation of multiple visualizations. 
+
+
+
+% \nat{For data comics, the challenge is to accurately represent the underlying data. You have to do it many times. Also you cannot show the exact same data in each panel or it would be busy, so you need to break it down, show some progression. Example of element identify, figure 8 in our graph comics paper, also vary level of details depending on what the insight is Figure 9 graph comics paper}
+
+
+
+% \bstart{C3 - Creating Transitions between Panels}
+% Panels in comics are spatially juxtaposed to convey a story as a collection of moments (space and time). Readers use their imagination to fill the gap between these moments~\cite{}, a process of reading called \textit{closure}~\cite{mccloud1993understanding, duncan2015power}. Facilitating closure is critical for data comics as leaving the reader to infer the missing parts can 
+%relying too much on the reader's imagination and sense of deduction may 
+% lead to incorrect %inferences about the data. 
+% understanding missing out of information. Introducing intermediary panels to convey the relationship between two panels more explicitly can mitigate this issue. 
+
+% For example Figure 2(c) depicts the transition between an overview panel and a detailed panel. To accompany the reader and convey the zooming operation, the author may create transitional panels. Depending on the type of transition required~\cite{bach2017emerging}, this technique can prove tedious as it may require producing series of panels with similar content but subtle progressive alterations.  
+
+
+% \nat{Creating transitions introduces a lot of duplication to help people fill the gap between comics. with minor modifications in between.}
+%\paragraph{Transitions}
+%The composition and arrangement of panels create the \textit{grammar of comics}~\cite{eisner2008comics}. McCloud discusses six transitions that are common in traditional comics: \textit{moment-to-moment, action-to-ction, subject-to-subject, aspect-to-aspect, and non-sequitur}. Others suggested a different taxonomy based on spatio-temporality~\cite{cohn2003syntatic}. If panels in transitions are far apart in time or space, it would require more cognitive efforts to generate closure; in such cases, captions or dialogues can be used to aid understanding.
+
+
+% \bstart{C4 - Conveying a Linear Narrative in a Spatial Layout}
+% Data comics have the power to guide readers through a narrative by providing a sequential reading experience while also offering them to gain an overview of the story and control their reading pace by laying out story pieces in 2D space. However, achieving a compelling narrative in an optimal layout requires a delicate balance between the number of panels, their size and ratio as well as their arrangement in space, which in turn might require adjusting their content and order. 
+
+% In addition, working with data induces a set of constraints as the accurate depiction of data points (C1) impacts panel sizes or ratios for example, and the selection of data aspects and insights to represent (C2) and their transitions (C3) has a direct influence on the number of panels. Juggling with all of these parameters and experimenting with different sets of panels and arrangements can be a daunting, time-consuming and laborious task, especially for an audience aiming at communicating about their data and unlikely versed in comics design.
+
+%The transitions between adjacent panels does not take into account the global layout of the panels on a page~\cite{caldwell2012comic}. 
+%The layout does not change the meaning but perception of the narrative (e.g., pacing, reading order)~\cite{cohn2014architecture}. For instance, when two vertically stacked panels are directly adjacent to a long vertical panel spanning the previous two, blockage can occur and confuse readers to deviate from a conventional reading order~\cite{cohn2014architecture}. A canonical grid is most popularly used~\cite{postema2013narrative,abel2008drawing} while other variations are possible such as staggered and overlapping panels~\cite{cohn2014architecture}. 
+
+%Bach et al. identified different design patterns of panel layouts and content relations between panels to further explore the dimensions of flow and narration~\cite{bachdesign}. These patterns suggest the expressive potential of data comics to meet different narrative styles and structures. 
+
+
+
+
+
+
+
+
+% \paragraph{C5: Consistency of visuals}
+% \nat{having consistency for multiple elements is really hard and requires iteration. When dealing with multiple panels, changing visual encodings such as using a different shape or a different color can be really tedious, as it requires to change multiple times}
+
+
+
+% There are a number of types of transitions that can occur between consecutive panels. The most influential taxonomy is McCloud's six types of panel-to-panel transitions, including 1) moment-to-moment: a single action depicted in a series of moments, 2) action-to-action: a single subject (person, object, etc.) portrayed in a series of actions , 3) subject-to-subject: a series of changing subjects in a single scene , 4) aspect-to-aspect: transitions between different aspects of a place, idea or mood, and so forth , 5) scene-to-scene: transitions across significant distances of time and space, and 6) non-sequitur: transitions with no immediate logical connections~\cite{mccloud2011making,mccloud1993understanding}. 
+
+% These kinds of transitions can be further categorized based on whether they involve temporal (action-to-action, moment-to-moment), spatial (aspect-to-aspect, scene-to-scene), or spatio-temporal (subject-to-subject, scene-to-scene) shifts between panels~\cite{cohn2003syntatic}. However, some transitions such as scene-to-scene or aspect-to-aspect , often do not clearly show explicit temporal or spatial relations between panels~\cite{cohn2003syntatic}. 
+
+% On the other hand, blockage layouts can confuse readers to deviate from a conventional reading order (left-to-right and down), in which two vertically stacked panels are directly adjacent to a long vertical panel spanning the previous two~\cite{cohn2014architecture}. 
+% The layout is independent of the content of comics, meaning that a sequence of panels can be arranged into numerous layouts with no effect on its meaning~\cite{cohn2014architecture}. 
+
+% However, the perception of the narrative to readers (e.g., pacing, reading order) can be different depending on the physical layout of panels~\cite{cohn2014architecture}. 
+
+
+
+
+% BENJAMIN
+% - Motivation for using Data Comics.
+% - McClSome background information in Comicsoud
+% - Why comics
+% - how do comics work
+% - essential comics: words and pictures, panels, gutter+closure, layouts, transition
+
+% \begin{itemize}
+% 	\item Motivation for using Data Comics
+% 	\item Elements of Comics
+% 	\item Data-Driven Storytelling
+% 	\item Narrative Visualization and Genres
+% 	\item Narrative Patterns of Visual Storytelling
+% 	\item Science of Data-Driven Storytelling 
+% 	\item Engagement, Memorability, Rhetoric, Sequencing
+% 	\item Explorable Explanations, Personal Visualization
+%   \end{itemize}
